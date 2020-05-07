@@ -57,11 +57,10 @@
 
             <v-responsive class="mx-auto title font-weight-light mb-8" max-width="720">SPECS HERE</v-responsive>
 
-            <v-avatar class="elevation-12 mb-12" size="500">
-              <v-img src="https://source.unsplash.com/E5GIqru4dwA/1920x2880"></v-img>
-            </v-avatar>
-
-            <div></div>
+            <v-parallax
+              :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
+              src="https://source.unsplash.com/E5GIqru4dwA/1920x2880"
+            ></v-parallax>
           </v-container>
 
           <div class="py-12"></div>
