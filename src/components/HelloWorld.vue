@@ -14,7 +14,7 @@
           <v-row no-gutters>
             <v-img
               :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="https://source.unsplash.com/KiRlN3jjVNU/1600x900"
+              src="https://source.unsplash.com/KiRlN3jjVNU/1920X1280"
             >
               <v-theme-provider dark>
                 <v-container fill-height>
@@ -58,7 +58,7 @@
             <v-responsive class="mx-auto title font-weight-light mb-8" max-width="720">SPECS HERE</v-responsive>
 
             <v-avatar class="elevation-12 mb-12" size="500">
-              <v-img src="https://source.unsplash.com/E5GIqru4dwA/1600x900"></v-img>
+              <v-img src="https://source.unsplash.com/E5GIqru4dwA/1920x2880"></v-img>
             </v-avatar>
 
             <div></div>
