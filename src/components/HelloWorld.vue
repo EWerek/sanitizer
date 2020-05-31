@@ -14,7 +14,7 @@
           <v-row no-gutters>
             <v-img
               :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="https://source.unsplash.com/KiRlN3jjVNU/1920X1280"
+              src="https://source.unsplash.com/-JcraKNNnQQ/1920x1280"
             >
               <v-theme-provider dark>
                 <v-container fill-height>
@@ -47,9 +47,12 @@
           <div class="py-12"></div>
 
           <v-container class="text-center">
-            <h2 class="display-1 font-weight-bold mb-3">Executive Maintenance Services</h2>
+            <h2
+              :class="[$vuetify.breakpoint.smAndDown ? 'body-2' : 'headline']"
+              class="blue-grey lighten-3 --text display-1 font-weight-bold mb-3"
+            >Executive Maintenance Services</h2>
             <p
-              style=" font-size: 1em;"
+              :class="[$vuetify.breakpoint.smAndDown ? 'body-1' : 'title']"
             >We are a family-run company that has been in the cleaning supply business for over 40 years. During these chaotic times we have locally produced sanitizer gel to help in the fight against the Corona Virus. The sanitizer is NPN and CFIA certified and comes in cases of four 1 gallon bottles. We have automatic refillable dispensers available which hold 800 mL of gel. They are easily wall-mounted with tape so that there is no damage to the walls or alternatively they can be fastened with screws. We also have metal stands available for an additional cost.</p>
 
             <v-responsive class="mx-auto mb-8" width="56">
@@ -119,7 +122,7 @@
         <section id="stats">
           <v-parallax
             :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-            src="https://source.unsplash.com/yAXbfq1wI7I/1600x900"
+            src="https://source.unsplash.com/s0grRYEDaL4/1920x852"
           ></v-parallax>
         </section>
 
@@ -208,20 +211,17 @@ export default {
       svgPath: mdiBottleTonicPlus,
       articles: [
         {
-          src:
-            "https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+          src: "https://source.unsplash.com/xzI3xGoQu34/1920x1302",
           title: "",
           text: "GEL"
         },
         {
-          src:
-            "https://images.unsplash.com/photo-1475938476802-32a7e851dad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+          src: "https://source.unsplash.com/LiPIUvzwekw/1920x2560",
           title: "",
           text: "DISPENSER"
         },
         {
-          src:
-            "https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80",
+          src: "https://source.unsplash.com/vDs7KenVpw0/1920x2560",
           title: "",
           text: "STAND"
         }
