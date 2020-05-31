@@ -1,5 +1,5 @@
 module.exports = {
-  "publicPath": "/sanitizer",
+  //"publicPath": "/sanitizer",
   "outputDir": "docs",
   "transpileDependencies": [
     "vuetify"

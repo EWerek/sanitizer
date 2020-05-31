@@ -66,7 +66,7 @@
                 <v-row class="mx-auto">
                   <v-col v-for="[value, title] of stats" :key="title" cols="12" md="4">
                     <div class="text-center">
-                      <div class="display-3 font-weight-black mb-4" v-text="value"></div>
+                      <div class="display-3 font-weight-black mb-4" v-html="value"></div>
 
                       <div class="title font-weight-regular text-uppercase" v-text="title"></div>
                     </div>
@@ -107,7 +107,7 @@
                     v-text="title"
                   ></v-card-title>
 
-                  <v-card-text class="subtitle-1" v-text="text"></v-card-text>
+                  <v-card-text class="subtitle-1" v-html="text"></v-card-text>
                 </v-card>
               </v-col>
             </v-row>
@@ -243,13 +243,13 @@ export default {
           icon: "mdi-cellphone-basic",
           title: "Contact Info",
           text:
-            "Ethan Werek Executive Maintenance Services 416-567-4811 164 Torbay Rd, Markham, ON L3R 1G6, Canada"
+            "Ethan Werek <br/> Executive Maintenance Services <br/>  416-567-4811 <br/>  164 Torbay Rd, Markham, ON L3R 1G6, Canada"
         }
       ],
       stats: [
-        ["Four Gallon Case of Gel", "$325"],
-        ["Wall Mount Dispenser", "$75"],
-        ["Metal Stand (4.5 ft)", "$145"]
+        ["Four Gallon <br/>  Case of Gel", "$325"],
+        ["Wall Mount <br/>  Dispenser", "$75"],
+        ["Metal Stand<br/>  (4.5 ft)", "$145"]
       ]
     };
   }
