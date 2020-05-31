@@ -242,7 +242,8 @@ export default {
         {
           icon: "mdi-cellphone-basic",
           title: "Contact Info",
-          text: "Ethan Werek Executive Maintenance Services 416-567-4811"
+          text:
+            "Ethan Werek Executive Maintenance Services 416-567-4811 164 Torbay Rd, Markham, ON L3R 1G6, Canada"
         }
       ],
       stats: [
