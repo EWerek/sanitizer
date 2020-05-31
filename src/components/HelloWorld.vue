@@ -14,7 +14,7 @@
           <v-row no-gutters>
             <v-img
               :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="https://source.unsplash.com/KiRlN3jjVNU/1920X1280"
+              src="https://source.unsplash.com/4y3efE_x-NU/1920X1280"
             >
               <v-theme-provider dark>
                 <v-container fill-height>
@@ -47,18 +47,33 @@
           <div class="py-12"></div>
 
           <v-container class="text-center">
-            <h2 class="display-2 font-weight-bold mb-3">SPECS</h2>
+            <h2 class="display-2 font-weight-bold mb-3">Executive Maintenance Services</h2>
+            <p
+              style=" font-size: 2em;"
+            >We are a family-run company that has been in the cleaning supply business for over 40 years. During these chaotic times we have locally produced sanitizer gel to help in the fight against the Corona Virus. The sanitizer is NPN and CFIA certified and comes in cases of four 1 gallon bottles. We have automatic refillable dispensers available which hold 800 mL of gel. They are easily wall-mounted with tape so that there is no damage to the walls or alternatively they can be fastened with screws. We also have metal stands available for an additional cost.</p>
 
             <v-responsive class="mx-auto mb-8" width="56">
               <v-divider class="mb-1"></v-divider>
             </v-responsive>
 
-            <v-responsive class="mx-auto title font-weight-light mb-8" max-width="720">SPECS HERE</v-responsive>
+            <v-responsive class="mx-auto title font-weight-light mb-8" max-width="720">AVAILABLE</v-responsive>
 
             <v-parallax
               :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
               src="https://source.unsplash.com/E5GIqru4dwA/1920x2880"
-            ></v-parallax>
+            >
+              <v-container fill-height>
+                <v-row class="mx-auto">
+                  <v-col v-for="[value, title] of stats" :key="title" cols="12" md="4">
+                    <div class="text-center">
+                      <div class="display-3 font-weight-black mb-4" v-text="value"></div>
+
+                      <div class="title font-weight-regular text-uppercase" v-text="title"></div>
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-parallax>
           </v-container>
 
           <div class="py-12"></div>
@@ -112,7 +127,7 @@
           <div class="py-12"></div>
 
           <v-container>
-            <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">ANYTHING ELSE</h2>
+            <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">PRODUCTS</h2>
 
             <v-responsive class="mx-auto mb-12" width="56">
               <v-divider class="mb-1"></v-divider>
@@ -195,23 +210,20 @@ export default {
         {
           src:
             "https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-          title: "HEY JAMBOY",
-          text:
-            "Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget tortor tempor, quis porta tellus dictum."
+          title: "",
+          text: "GEL"
         },
         {
           src:
             "https://images.unsplash.com/photo-1475938476802-32a7e851dad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-          title: "HEY JAMBOY",
-          text:
-            "Nam ut leo ipsum. Maecenas pretium aliquam feugiat. Aenean vel tempor est, vitae tincidunt risus. Sed sodales vestibulum nibh."
+          title: "",
+          text: "DISPENSER"
         },
         {
           src:
             "https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80",
-          title: "HEY JAMBOY",
-          text:
-            "Vestibulum in dictum velit, in rhoncus nibh. Maecenas neque libero, interdum a dignissim in, aliquet vitae lectus. Phasellus lorem enim, luctus ut velit eget."
+          title: "",
+          text: "STAND"
         }
       ],
       features: [
@@ -219,20 +231,24 @@ export default {
           icon: "mdi-virus",
           title: "Kills Pathogens",
           text:
-            "Contains 70% alcohol The use of hand sanitisers has been proven to reduce the risk of pathogens cross contamination. Our alcohol-based Initial Hand Sanitiser Gel rapidly acts against a broad spectrum of germs. It evaporates quickly to leave hands feeling fresh and is quick and convenient to use any time, anywhere. Our Hand Sanitiser is effective against coronavirus"
+            "Contains 70% alcohol The use of hand sanitisers has been proven to reduce the risk of pathogens and cross contamination. Our Hand Sanitiser is effective against coronavirus"
         },
         {
           icon: "mdi-tools",
           title: "Easy to Install",
           text:
-            "Practical and hygienic. Easy to top up. Wall mounted. Viewing window to check stock level. Capacity - 1 litre. Dimensions - H 250mm x W 125mm x D 136mm.Weight (without consumable) - 950 grams.Material - ABS plastic"
+            "Practical and hygienic. Easy to top up. Wall mounted. Viewing window to check stock level. Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams"
         },
         {
-          icon: "mdi-shield-outline",
-          title: "Long-term Support",
-          text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam"
+          icon: "mdi-cellphone-basic",
+          title: "Contact Info",
+          text: "Ethan Werek Executive Maintenance Services 416-567-4811"
         }
+      ],
+      stats: [
+        ["Four Gallon Case of Gel", "$325"],
+        ["Wall Mount Dispenser", "$75"],
+        ["Metal Stand (4.5 ft)", "$145"]
       ]
     };
   }
