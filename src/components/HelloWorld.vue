@@ -14,7 +14,7 @@
           <v-row no-gutters>
             <v-img
               :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="https://source.unsplash.com/4y3efE_x-NU/1920X1280"
+              src="https://source.unsplash.com/KiRlN3jjVNU/1920X1280"
             >
               <v-theme-provider dark>
                 <v-container fill-height>
