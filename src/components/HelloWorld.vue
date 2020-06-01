@@ -4,6 +4,7 @@
       <v-app-bar app color="white" height="100">
         <v-avatar class="mr-3" color="grey lighten-5" size="70">
           <v-icon>{{ svgPath }}</v-icon>
+          <!-- <v-img src="@/assets/sanking.png" aspect-ratio="1.2" /> -->
         </v-avatar>
 
         <v-toolbar-title class="font-weight-black headline blue--text">EMS</v-toolbar-title>
@@ -14,7 +15,7 @@
           <v-row no-gutters>
             <v-img
               :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="https://source.unsplash.com/-JcraKNNnQQ/1920x1280"
+              src="@/assets/glass.jpg"
             >
               <v-theme-provider dark>
                 <v-container fill-height>
@@ -47,14 +48,10 @@
           <div class="py-12"></div>
 
           <v-container class="text-center">
-            <!-- <h2
-              :class="[$vuetify.breakpoint.smAndDown ? 'body-2' : 'headline']"
-              class="display-1 font-weight-bold mb-3 blue-grey--text"
-            >Executive Maintenance Services</h2>-->
             <v-responsive
               class="mx-auto title font-weight-light mb-8 blue-grey--text"
               max-width="720"
-            >Executive Maintenance Services</v-responsive>
+            >EXECUTIVE MAINTENANCE SERVICES</v-responsive>
             <p
               :class="[$vuetify.breakpoint.smAndDown ? 'body-1' : 'title']"
             >We are a family-run company that has been in the cleaning supply business for over 40 years. During these chaotic times we have locally produced sanitizer gel to help in the fight against the Corona Virus. The sanitizer is NPN and CFIA certified and comes in cases of four 1 gallon bottles. We have automatic refillable dispensers available which hold 800 mL of gel. They are easily wall-mounted with tape so that there is no damage to the walls or alternatively they can be fastened with screws. We also have metal stands available for an additional cost.</p>
@@ -69,8 +66,8 @@
             >AVAILABLE</v-responsive>
 
             <v-parallax
-              :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-              src="https://source.unsplash.com/E5GIqru4dwA/1920x2880"
+              :height="$vuetify.breakpoint.smAndDown ? 1900 : 500"
+              src="@/assets/bottle.jpg"
             >
               <v-container fill-height>
                 <v-row class="mx-auto">
