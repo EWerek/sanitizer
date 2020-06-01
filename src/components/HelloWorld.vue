@@ -21,14 +21,14 @@
                   <v-row align="center" class="white--text mx-auto" justify="center">
                     <v-col class="white--text text-right blue--text" cols="12" tag="h1">
                       <span
-                        :class="[$vuetify.breakpoint.smAndDown ? 'title' : 'display-2']"
+                        :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']"
                         class="font-weight-light"
                       >EMS</span>
 
                       <br />
 
                       <span
-                        :class="[$vuetify.breakpoint.smAndDown ? 'headline': 'display-4']"
+                        :class="[$vuetify.breakpoint.smAndDown ? 'display-1	': 'display-3']"
                         class="font-weight-black"
                       >HAND SANITIZER</span>
                     </v-col>
