@@ -47,10 +47,14 @@
           <div class="py-12"></div>
 
           <v-container class="text-center">
-            <h2
+            <!-- <h2
               :class="[$vuetify.breakpoint.smAndDown ? 'body-2' : 'headline']"
               class="display-1 font-weight-bold mb-3 blue-grey--text"
-            >Executive Maintenance Services</h2>
+            >Executive Maintenance Services</h2>-->
+            <v-responsive
+              class="mx-auto title font-weight-light mb-8 blue-grey--text"
+              max-width="720"
+            >Executive Maintenance Services</v-responsive>
             <p
               :class="[$vuetify.breakpoint.smAndDown ? 'body-1' : 'title']"
             >We are a family-run company that has been in the cleaning supply business for over 40 years. During these chaotic times we have locally produced sanitizer gel to help in the fight against the Corona Virus. The sanitizer is NPN and CFIA certified and comes in cases of four 1 gallon bottles. We have automatic refillable dispensers available which hold 800 mL of gel. They are easily wall-mounted with tape so that there is no damage to the walls or alternatively they can be fastened with screws. We also have metal stands available for an additional cost.</p>
