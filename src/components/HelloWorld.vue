@@ -2,11 +2,12 @@
   <div id="app">
     <v-app>
       <v-app-bar app color="white" height="100">
-        <v-avatar class="mr-3" color="grey lighten-5" size="70">
-          <v-icon>{{ svgPath }}</v-icon>
+        <v-avatar tile class="profile" width="175" color="grey lighten-5" size="70">
+          <!-- <v-icon>{{ svgPath }}</v-icon> -->
+          <v-img src="@/assets/emslogo.jpg" />
         </v-avatar>
 
-        <v-toolbar-title class="font-weight-black headline blue--text">EMS</v-toolbar-title>
+        <v-toolbar-title class="font-weight-black headline blue--text"></v-toolbar-title>
       </v-app-bar>
 
       <v-content>
@@ -186,7 +187,7 @@
                 </v-col>
 
                 <v-col class="mx-auto" cols="auto">
-                  <v-btn color="accent" x-large>Submit</v-btn>
+                  <v-btn color="accent" x-large @submit.prevent="sendEmail">Submit</v-btn>
                 </v-col>
               </v-row>
             </v-theme-provider>
@@ -207,6 +208,7 @@
 
 <script>
 import { mdiBottleTonicPlus } from "@mdi/js";
+import emailjs from "emailjs-com";
 export default {
   name: "HelloWorld",
   data() {
@@ -255,6 +257,25 @@ export default {
         ["Metal Stand<br/>  (4.5 ft)", "$145"]
       ]
     };
+  },
+  methods: {
+    sendEmail: e => {
+      emailjs
+        .sendForm(
+          "YOUR_SERVICE_ID",
+          "YOUR_TEMPLATE_ID",
+          e.target,
+          "YOUR_USER_ID"
+        )
+        .then(
+          result => {
+            console.log("SUCCESS!", result.status, result.text);
+          },
+          error => {
+            console.log("FAILED...", error);
+          }
+        );
+    }
   }
 };
 </script>
