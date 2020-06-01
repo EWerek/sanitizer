@@ -54,7 +54,7 @@
             >EXECUTIVE MAINTENANCE SERVICES</v-responsive>
             <p
               :class="[$vuetify.breakpoint.smAndDown ? 'body-1' : 'title']"
-            >We are a family-run company that has been in the cleaning supply business for over 40 years. During these chaotic times we have locally produced sanitizer gel to help in the fight against the Corona Virus. The sanitizer is NPN and CFIA certified and comes in cases of four 1 gallon bottles. We have automatic refillable dispensers available which hold 800 mL of gel. They are easily wall-mounted with tape so that there is no damage to the walls or alternatively they can be fastened with screws. We also have metal stands available for an additional cost.</p>
+            >We are a family-run company that has been in the cleaning supply business for over 40 years. During these chaotic times we have locally produced sanitizer gel to help in the fight against the Corona Virus. The sanitizer is NPN and CFIA certified and comes in cases of four 1 gallon bottles or individual 500mL and 32oz bottles. We have automatic refillable dispensers available which hold 800 mL of gel. They are easily wall-mounted with tape so that there is no damage to the walls or alternatively they can be fastened with screws. We also have metal stands available on offer.</p>
 
             <v-responsive class="mx-auto mb-8" width="56">
               <v-divider class="mb-1"></v-divider>
@@ -71,7 +71,7 @@
             >
               <v-container fill-height>
                 <v-row class="mx-auto">
-                  <v-col v-for="[value, title] of stats" :key="title" cols="12" md="4">
+                  <v-col v-for="[value, title] of stats" :key="title" cols="12" md="3">
                     <div class="text-center">
                       <div class="display-1 font-weight-black mb-4" v-html="value"></div>
 
@@ -123,13 +123,6 @@
           <div class="py-12"></div>
         </section>
 
-        <!-- <section id="stats">
-          <v-parallax
-            :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-            src="https://source.unsplash.com/s0grRYEDaL4/1920x852"
-          ></v-parallax>
-        </section>-->
-
         <section id="blog">
           <div class="py-12"></div>
 
@@ -144,7 +137,7 @@
 
             <v-row>
               <v-col v-for="({ src, text, title }, i) in articles" :key="i" cols="12" md="4">
-                <v-img :src="src" class="mb-4" height="275" max-width="100%"></v-img>
+                <v-img :src="src" class="mb-4" height="475" max-width="100%"></v-img>
 
                 <h3 class="font-weight-black mb-4 text-uppercase" v-text="title"></h3>
 
@@ -216,19 +209,19 @@ export default {
       svgPath: mdiBottleTonicPlus,
       articles: [
         {
-          src: "https://source.unsplash.com/xzI3xGoQu34/1920x1302",
-          title: "",
-          text: "GEL"
+          src: require("@/assets/products/twobottles.png"),
+          title: "Single Bottles",
+          text: "500mL ($12.99) & 32oz ($19.99)"
         },
         {
-          src: "https://source.unsplash.com/LiPIUvzwekw/640x853",
-          title: "",
-          text: "DISPENSER"
+          src: require("@/assets/products/casebottle1.png"),
+          title: "Case of Gel",
+          text: "Four 1 Gallon Bottles ($325)"
         },
         {
-          src: "https://source.unsplash.com/vDs7KenVpw0/1920x2560",
-          title: "",
-          text: "STAND"
+          src: require("@/assets/products/dispenser1.png"),
+          title: "Wall Mount",
+          text: "Dispenser ($75)"
         }
       ],
       features: [
@@ -252,6 +245,7 @@ export default {
         }
       ],
       stats: [
+        ["Single Bottles <br/>  500mL & 32oz", "$12.99 & $19.99"],
         ["Four Gallon <br/>  Case of Gel", "$325"],
         ["Wall Mount <br/>  Dispenser", "$75"],
         ["Metal Stand<br/>  (4.5 ft)", "$145"]
