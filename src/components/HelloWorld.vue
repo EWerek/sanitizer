@@ -4,7 +4,6 @@
       <v-app-bar app color="white" height="100">
         <v-avatar class="mr-3" color="grey lighten-5" size="70">
           <v-icon>{{ svgPath }}</v-icon>
-          <!-- <v-img src="@/assets/sanking.png" aspect-ratio="1.2" /> -->
         </v-avatar>
 
         <v-toolbar-title class="font-weight-black headline blue--text">EMS</v-toolbar-title>
@@ -14,13 +13,15 @@
         <section id="hero">
           <v-row no-gutters>
             <v-img
-              :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="@/assets/glass.jpg"
+              min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
+              src="@/assets/santrust.png"
+              aspect-ratio="3.1"
             >
+              >
               <v-theme-provider dark>
                 <v-container fill-height>
                   <v-row align="center" class="white--text mx-auto" justify="center">
-                    <v-col class="white--text text-center" cols="12" tag="h1">
+                    <v-col class="white--text text-right" cols="12" tag="h1">
                       <span
                         :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
                         class="font-weight-light"
@@ -67,7 +68,7 @@
 
             <v-parallax
               :height="$vuetify.breakpoint.smAndDown ? 1900 : 500"
-              src="@/assets/bottle.jpg"
+              src="@/assets/covid.jpg"
             >
               <v-container fill-height>
                 <v-row class="mx-auto">
