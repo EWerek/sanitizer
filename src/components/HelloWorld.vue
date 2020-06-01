@@ -165,23 +165,18 @@
             <v-theme-provider light>
               <v-row>
                 <v-col cols="12">
-                  <v-text-field flat label="Name*" solo></v-text-field>
+                  <v-text-field v-model="name" flat label="Name*" solo></v-text-field>
                 </v-col>
 
                 <v-col cols="12">
-                  <v-text-field flat label="Email*" solo></v-text-field>
+                  <v-text-field v-model="email" flat label="Email*" solo></v-text-field>
                 </v-col>
-
                 <v-col cols="12">
-                  <v-text-field flat label="Subject*" solo></v-text-field>
-                </v-col>
-
-                <v-col cols="12">
-                  <v-textarea flat label="Message*" solo></v-textarea>
+                  <v-textarea v-model="message" flat label="Message*" solo></v-textarea>
                 </v-col>
 
                 <v-col class="mx-auto" cols="auto">
-                  <v-btn color="accent" x-large @submit.prevent="sendEmail">Submit</v-btn>
+                  <v-btn color="accent" x-large @click="sendEmail">Submit</v-btn>
                 </v-col>
               </v-row>
             </v-theme-provider>
@@ -207,12 +202,15 @@ export default {
   name: "HelloWorld",
   data() {
     return {
+      message: "",
+      email: "",
+      name: "",
       svgPath: mdiBottleTonicPlus,
       template_params: {
-        reply_to: "reply_to_value",
-        from_name: "from_name_value",
-        to_name: "to_name_value",
-        message_html: "message_html_value"
+        reply_to: "",
+        from_name: "",
+        to_name: "",
+        message_html: ""
       },
       mainParagraph:
         "EMS is a family run business that has been providing cleaning services and supplies to the Greater Toronto Area for 40 years.<br/><br/> During the current pandemic, our expects have formulated and locally produced hand sanitizer that meets all of the guidelines set forward by Heath Canada. Our products have been issued Natural Product Numbers and have been vetted by the Canadian Food Inspection Agency (CFIA).<br/><br/>Our hand sanitizer is sold in several formats: Four gallon cases or single 500ml or 32oz bottles. In addition to the liquid, we offer automatic refillable dispensers which can be mounted directely to any wall by tape or screws. Alternatively, we also offer a metal stand if preferable to the wall mount",
@@ -263,23 +261,37 @@ export default {
   },
 
   methods: {
-    sendEmail: e => {
+    sendEmail() {
+      this.setTemplate();
       emailjs
-        .sendForm(
+        .send(
           "default_service",
           "template_e5G0Xaq6",
-          this.templateParams,
-          e.target,
+          this.template_params,
           "user_2VhHgP2YBwBzo9HUU1b8B"
         )
         .then(
           result => {
             console.log("SUCCESS!", result.status, result.text);
+            alert("Thanks, We will resond shortly");
+            this.clearform();
           },
           error => {
             console.log("FAILED...", error);
+            alert("Message failed - please try again");
           }
         );
+    },
+
+    setTemplate() {
+      this.template_params.message_html = this.message;
+      this.template_params.reply_to = this.email;
+      this.template_params.from_name = this.name;
+    },
+    clearform() {
+      this.name = "";
+      this.email = "";
+      this.name = "";
     }
   }
 };
