@@ -6,7 +6,7 @@
           <v-icon>{{ svgPath }}</v-icon>
         </v-avatar>
 
-        <v-toolbar-title class="font-weight-black headline">EMS</v-toolbar-title>
+        <v-toolbar-title class="font-weight-black headline blue--text">EMS</v-toolbar-title>
       </v-app-bar>
 
       <v-content>
@@ -49,7 +49,7 @@
           <v-container class="text-center">
             <h2
               :class="[$vuetify.breakpoint.smAndDown ? 'body-2' : 'headline']"
-              class="blue-grey lighten-3 --text display-1 font-weight-bold mb-3"
+              class="display-1 font-weight-bold mb-3 blue-grey--text"
             >Executive Maintenance Services</h2>
             <p
               :class="[$vuetify.breakpoint.smAndDown ? 'body-1' : 'title']"
@@ -59,7 +59,10 @@
               <v-divider class="mb-1"></v-divider>
             </v-responsive>
 
-            <v-responsive class="mx-auto title font-weight-light mb-8" max-width="720">AVAILABLE</v-responsive>
+            <v-responsive
+              class="mx-auto title font-weight-light mb-8 red--text"
+              max-width="720"
+            >AVAILABLE</v-responsive>
 
             <v-parallax
               :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
@@ -119,12 +122,12 @@
           <div class="py-12"></div>
         </section>
 
-        <section id="stats">
+        <!-- <section id="stats">
           <v-parallax
             :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
             src="https://source.unsplash.com/s0grRYEDaL4/1920x852"
           ></v-parallax>
-        </section>
+        </section>-->
 
         <section id="blog">
           <div class="py-12"></div>
@@ -216,7 +219,7 @@ export default {
           text: "GEL"
         },
         {
-          src: "https://source.unsplash.com/LiPIUvzwekw/1920x2560",
+          src: "https://source.unsplash.com/LiPIUvzwekw/640x853",
           title: "",
           text: "DISPENSER"
         },
