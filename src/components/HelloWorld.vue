@@ -14,7 +14,7 @@
           <v-row no-gutters>
             <v-img
               min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="@/assets/santrust.png"
+              src="@/assets/cartoon.png"
               aspect-ratio="3.1"
             >
               >
@@ -30,7 +30,7 @@
                       <br />
 
                       <span
-                        :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
+                        :class="[$vuetify.breakpoint.smAndDown ? 'display-2': 'display-4']"
                         class="font-weight-black"
                       >HAND SANITIZERS</span>
                     </v-col>
