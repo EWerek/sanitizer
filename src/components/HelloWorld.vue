@@ -12,11 +12,7 @@
       <v-content>
         <section id="hero">
           <v-row no-gutters>
-            <v-img
-              min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="@/assets/cartoon.png"
-              aspect-ratio="3.1"
-            >
+            <v-img height="1000px" src="@/assets/santrust.png">
               >
               <v-theme-provider dark>
                 <v-container fill-height>
@@ -236,7 +232,7 @@ export default {
           icon: "mdi-virus",
           title: "Kills Pathogens",
           text:
-            "Contains 70% alcohol The use of hand sanitisers has been proven to reduce the risk of pathogens and cross contamination. Our Hand Sanitiser is effective against coronavirus"
+            "Contains 70% alcohol The use of hand sanitisers has been proven to reduce the risk of pathogens and cross contamination. Our Hand Sanitiser is effective against coronavirus"
         },
         {
           icon: "mdi-tools",
@@ -260,5 +256,4 @@ export default {
   }
 };
 </script>
-
 
