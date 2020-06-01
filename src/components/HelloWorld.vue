@@ -12,8 +12,10 @@
       <v-content>
         <section id="hero">
           <v-row no-gutters>
-            <v-img height="1000px" src="@/assets/santrust.png">
-              >
+            <v-img
+              :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
+              src="@/assets/wide.png"
+            >
               <v-theme-provider dark>
                 <v-container fill-height>
                   <v-row align="center" class="white--text mx-auto" justify="center">
@@ -26,9 +28,9 @@
                       <br />
 
                       <span
-                        :class="[$vuetify.breakpoint.smAndDown ? 'display-2': 'display-4']"
+                        :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
                         class="font-weight-black"
-                      >HAND SANITIZERS</span>
+                      >HAND SANITIZER</span>
                     </v-col>
 
                     <v-btn class="align-self-end" fab outlined @click="$vuetify.goTo('#about-me')">
