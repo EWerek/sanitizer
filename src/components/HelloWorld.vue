@@ -54,7 +54,8 @@
             >EXECUTIVE MAINTENANCE SERVICES</v-responsive>
             <p
               :class="[$vuetify.breakpoint.smAndDown ? 'body-1' : 'title']"
-            >We are a family-run company that has been in the cleaning supply business for over 40 years. During these chaotic times we have locally produced sanitizer gel to help in the fight against the Corona Virus. The sanitizer is NPN and CFIA certified and comes in cases of four 1 gallon bottles or individual 500mL and 32oz bottles. We have automatic refillable dispensers available which hold 800 mL of gel. They are easily wall-mounted with tape so that there is no damage to the walls or alternatively they can be fastened with screws. We also have metal stands available on offer.</p>
+              v-html="mainParagraph"
+            />
 
             <v-responsive class="mx-auto mb-8" width="56">
               <v-divider class="mb-1"></v-divider>
@@ -207,6 +208,14 @@ export default {
   data() {
     return {
       svgPath: mdiBottleTonicPlus,
+      template_params: {
+        reply_to: "reply_to_value",
+        from_name: "from_name_value",
+        to_name: "to_name_value",
+        message_html: "message_html_value"
+      },
+      mainParagraph:
+        "EMS is a family run business that has been providing cleaning services and supplies to the Greater Toronto Area for 40 years.<br/><br/> During the current pandemic, our expects have formulated and locally produced hand sanitizer that meets all of the guidelines set forward by Heath Canada. Our products have been issued Natural Product Numbers and have been vetted by the Canadian Food Inspection Agency (CFIA).<br/><br/>Our hand sanitizer is sold in several formats: Four gallon cases or single 500ml or 32oz bottles. In addition to the liquid, we offer automatic refillable dispensers which can be mounted directely to any wall by tape or screws. Alternatively, we also offer a metal stand if preferable to the wall mount",
       articles: [
         {
           src: require("@/assets/products/twobottles.png"),
@@ -252,14 +261,16 @@ export default {
       ]
     };
   },
+
   methods: {
     sendEmail: e => {
       emailjs
         .sendForm(
-          "YOUR_SERVICE_ID",
-          "YOUR_TEMPLATE_ID",
+          "default_service",
+          "template_e5G0Xaq6",
+          this.templateParams,
           e.target,
-          "YOUR_USER_ID"
+          "user_2VhHgP2YBwBzo9HUU1b8B"
         )
         .then(
           result => {
