@@ -1,7 +1,44 @@
 <template>
   <div id="app">
     <v-app>
-      <v-app-bar app color="white" height="100">
+      <v-navigation-drawer v-model="drawer" clipped app mini-variant color="blue">
+        <v-list dense>
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon @click="$vuetify.goTo('#home')">mdi-home</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon @click="$vuetify.goTo('#about')">mdi-account</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>About US</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon @click="$vuetify.goTo('#products')">mdi-cart</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Products</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon @click="$vuetify.goTo('#contactus')">mdi-email</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Contact</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+      <v-app-bar clipped-left app color="white" height="100">
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <v-avatar tile class="profile" width="175" color="grey lighten-5" size="70">
           <!-- <v-icon>{{ svgPath }}</v-icon> -->
           <v-img src="@/assets/emslogo.jpg" />
@@ -10,8 +47,8 @@
         <v-toolbar-title class="font-weight-black headline blue--text"></v-toolbar-title>
       </v-app-bar>
 
-      <v-content>
-        <section id="splash">
+      <v-content style="padding-left: 0px; padding-top: 0px;">
+        <section id="home">
           <v-row no-gutters>
             <v-img
               :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
@@ -124,7 +161,7 @@
           <div class="py-12"></div>
         </section>
 
-        <section id="blog">
+        <section id="products">
           <div class="py-12"></div>
 
           <v-container>
@@ -149,41 +186,42 @@
 
           <div class="py-12"></div>
         </section>
+        <section id="contactus">
+          <v-sheet id="contact" color="#333333" dark tag="section" tile>
+            <div class="py-12"></div>
 
-        <v-sheet id="contact" color="#333333" dark tag="section" tile>
-          <div class="py-12"></div>
+            <v-container>
+              <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Contact Us</h2>
 
-          <v-container>
-            <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Contact Us</h2>
+              <v-responsive class="mx-auto mb-12" width="56">
+                <v-divider class="mb-1"></v-divider>
 
-            <v-responsive class="mx-auto mb-12" width="56">
-              <v-divider class="mb-1"></v-divider>
+                <v-divider></v-divider>
+              </v-responsive>
 
-              <v-divider></v-divider>
-            </v-responsive>
+              <v-theme-provider light>
+                <v-row>
+                  <v-col cols="12">
+                    <v-text-field v-model="name" flat label="Name*" solo></v-text-field>
+                  </v-col>
 
-            <v-theme-provider light>
-              <v-row>
-                <v-col cols="12">
-                  <v-text-field v-model="name" flat label="Name*" solo></v-text-field>
-                </v-col>
+                  <v-col cols="12">
+                    <v-text-field v-model="email" flat label="Email*" solo></v-text-field>
+                  </v-col>
+                  <v-col cols="12">
+                    <v-textarea v-model="message" flat label="Message*" solo></v-textarea>
+                  </v-col>
 
-                <v-col cols="12">
-                  <v-text-field v-model="email" flat label="Email*" solo></v-text-field>
-                </v-col>
-                <v-col cols="12">
-                  <v-textarea v-model="message" flat label="Message*" solo></v-textarea>
-                </v-col>
+                  <v-col class="mx-auto" cols="auto">
+                    <v-btn color="accent" x-large @click="sendEmail">Submit</v-btn>
+                  </v-col>
+                </v-row>
+              </v-theme-provider>
+            </v-container>
 
-                <v-col class="mx-auto" cols="auto">
-                  <v-btn color="accent" x-large @click="sendEmail">Submit</v-btn>
-                </v-col>
-              </v-row>
-            </v-theme-provider>
-          </v-container>
-
-          <div class="py-12"></div>
-        </v-sheet>
+            <div class="py-12"></div>
+          </v-sheet>
+        </section>
       </v-content>
 
       <v-footer class="justify-center" color="#292929" height="100">
@@ -200,9 +238,10 @@ import { mdiBottleTonicPlus } from "@mdi/js";
 import emailjs from "emailjs-com";
 
 export default {
-  name: "HelloWorld",
+  name: "SanitizerKing",
   data() {
     return {
+      drawer: false,
       message: "",
       email: "",
       name: "",
