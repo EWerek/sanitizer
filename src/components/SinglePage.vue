@@ -68,7 +68,7 @@
 
             <v-parallax
               :height="$vuetify.breakpoint.smAndDown ? 1900 : 500"
-              src="@/assets/unphoto.png"
+              src="@/assets/hand1.png"
             >
               <v-container fill-height>
                 <v-row class="mx-auto">
