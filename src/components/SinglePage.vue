@@ -242,7 +242,7 @@ export default {
   name: "SanitizerKing",
   data() {
     return {
-      drawer: false,
+      drawer: true,
       message: "",
       email: "",
       name: "",
