@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app>
-      <v-navigation-drawer v-model="drawer" clipped app mini-variant color="blue">
+      <v-navigation-drawer v-model="drawer" clipped right app mini-variant color="blue">
         <v-list dense>
           <v-list-item link>
             <v-list-item-action>
@@ -37,17 +37,18 @@
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <v-app-bar clipped-left app color="white" height="100">
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar clipped-right app color="white" height="100">
         <v-avatar tile class="profile" width="175" color="grey lighten-5" size="70">
           <!-- <v-icon>{{ svgPath }}</v-icon> -->
           <v-img src="@/assets/emslogo.jpg" />
         </v-avatar>
+        <v-spacer></v-spacer>
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
         <v-toolbar-title class="font-weight-black headline blue--text"></v-toolbar-title>
       </v-app-bar>
 
-      <v-content style="padding-left: 0px; padding-top: 0px;">
+      <v-content style="padding-left: 0px; padding-top: 0px; padding-right: 0px;">
         <section id="home">
           <v-row no-gutters>
             <v-img
