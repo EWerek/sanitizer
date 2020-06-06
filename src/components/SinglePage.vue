@@ -174,14 +174,22 @@
             </v-responsive>
 
             <v-row>
-              <v-col v-for="({ src, text, title }, i) in articles" :key="i" cols="12" md="4">
+              <v-col
+                v-for="({ src, text, title, button }, i) in products"
+                :key="i"
+                cols="12"
+                md="4"
+              >
                 <v-img :src="src" class="mb-4" height="70%" max-width="100%"></v-img>
 
                 <h3 class="font-weight-black mb-4 text-uppercase" v-text="title"></h3>
 
                 <div class="title font-weight-light mb-5" v-text="text"></div>
+                <component :is="button"></component>
               </v-col>
             </v-row>
+            <BtnCart />
+            <BtnPayPal />
             <div ref="paypalButton" style="text-align: center;"></div>
           </v-container>
 
@@ -235,11 +243,22 @@
 </template>
 
 <script>
-import { mdiBottleTonicPlus } from "@mdi/js";
 import emailjs from "emailjs-com";
+import BtnSingleBottle from "./BtnSingleBottle";
+import BtnCase from "./BtnCase";
+import BtnDispenser from "./BtnDispenser";
+import BtnCart from "./BtnCart";
+import BtnPayPal from "./BtnPayPal";
 
 export default {
   name: "SanitizerKing",
+  components: {
+    BtnSingleBottle,
+    BtnCase,
+    BtnDispenser,
+    BtnCart,
+    BtnPayPal
+  },
   data() {
     return {
       drawer: false,
@@ -247,7 +266,6 @@ export default {
       message: "",
       email: "",
       name: "",
-      svgPath: mdiBottleTonicPlus,
       template_params: {
         reply_to: "",
         from_name: "",
@@ -256,21 +274,24 @@ export default {
       },
       mainParagraph:
         "EMS is a family run business that has been providing cleaning services and supplies to the Greater Toronto Area for 40 years.<br/><br/> During the current pandemic, our experts have formulated and locally produced hand sanitizer that meets all of the guidelines set forward by Heath Canada. Our products have been issued Natural Product Numbers and have been vetted by the Canadian Food Inspection Agency (CFIA).<br/><br/>Our hand sanitizer is sold in several formats: Four gallon cases or single 500ml or 32oz bottles. In addition to the liquid, we offer automatic refillable dispensers which can be mounted directely to any wall by tape or screws. Alternatively, we also offer a metal stand if preferable to the wall mount",
-      articles: [
+      products: [
         {
           src: require("@/assets/products/twobottles.png"),
           title: "Single Bottles",
-          text: "500mL ($12.99) & 32oz ($19.99)"
+          // text: "500mL ($12.99) & 32oz ($19.99)",
+          button: "BtnSingleBottle"
         },
         {
           src: require("@/assets/products/casebottle1.png"),
-          title: "Case of Gel",
-          text: "Four 1 Gallon Bottles ($325)"
+          title: "Four Gallon Case",
+          //text: "Four 1 Gallon Bottles ($325)",
+          button: "BtnCase"
         },
         {
           src: require("@/assets/products/dispenser1.png"),
-          title: "Wall Mount",
-          text: "Dispenser ($75)"
+          title: "Wall Mount Dispenser",
+          // text: "Dispenser ($75)"
+          button: "BtnDispenser"
         }
       ],
       features: [
@@ -317,7 +338,7 @@ export default {
               purchase_units: [
                 {
                   amount: {
-                    value: "1"
+                    value: "12.99"
                   }
                 }
               ]
@@ -369,10 +390,10 @@ export default {
     }
   },
   mounted() {
-    const script = document.createElement("script");
-    script.src = "https://www.paypal.com/sdk/js?client-id=sb&currency=USD";
-    script.addEventListener("load", this.setLoaded);
-    document.body.appendChild(script);
+    // const script = document.createElement("script");
+    // script.src = "https://www.paypal.com/sdk/js?client-id=sb&currency=USD";
+    // script.addEventListener("load", this.setLoaded);
+    // document.body.appendChild(script);
     if (this.viewPortSmall === false) {
       this.drawer = true;
     }
