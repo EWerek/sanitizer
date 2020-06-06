@@ -39,7 +39,6 @@
       </v-navigation-drawer>
       <v-app-bar clipped-right app color="white" height="100">
         <v-avatar tile class="profile" width="175" color="grey lighten-5" size="70">
-          <!-- <v-icon>{{ svgPath }}</v-icon> -->
           <v-img src="@/assets/emslogo.jpg" />
         </v-avatar>
         <v-spacer></v-spacer>
@@ -183,6 +182,7 @@
                 <div class="title font-weight-light mb-5" v-text="text"></div>
               </v-col>
             </v-row>
+            <div ref="paypalButton" style="text-align: center;"></div>
           </v-container>
 
           <div class="py-12"></div>
@@ -243,6 +243,7 @@ export default {
   data() {
     return {
       drawer: true,
+      viewPortSmall: this.$vuetify.breakpoint.smAndDown,
       message: "",
       email: "",
       name: "",
@@ -302,6 +303,38 @@ export default {
   },
 
   methods: {
+    setLoaded() {
+      window.paypal
+        .Buttons({
+          style: {
+            shape: "pill",
+            color: "silver",
+            layout: "vertical",
+            label: "pay"
+          },
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: "1"
+                  }
+                }
+              ]
+            });
+          },
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+              alert(
+                "Transaction completed by " +
+                  details.payer.name.given_name +
+                  "!"
+              );
+            });
+          }
+        })
+        .render(this.$refs.paypalButton);
+    },
     sendEmail() {
       this.setTemplate();
       emailjs
@@ -334,7 +367,25 @@ export default {
       this.email = "";
       this.name = "";
     }
-  }
+  },
+  mounted() {
+    const script = document.createElement("script");
+    script.src = "https://www.paypal.com/sdk/js?client-id=sb&currency=USD";
+    script.addEventListener("load", this.setLoaded);
+    document.body.appendChild(script);
+  },
+  watch: {
+    viewPortSmall() {
+      if (this.viewPortSmall === false) {
+        this.drawer = false;
+      }
+    }
+  },
+
+  computed: {}
 };
 </script>
+
+
+
 
