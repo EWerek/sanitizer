@@ -242,7 +242,7 @@ export default {
   name: "SanitizerKing",
   data() {
     return {
-      drawer: true,
+      drawer: false,
       viewPortSmall: this.$vuetify.breakpoint.smAndDown,
       message: "",
       email: "",
@@ -373,6 +373,9 @@ export default {
     script.src = "https://www.paypal.com/sdk/js?client-id=sb&currency=USD";
     script.addEventListener("load", this.setLoaded);
     document.body.appendChild(script);
+    if (this.viewPortSmall === false) {
+      this.drawer = true;
+    }
   },
   watch: {
     viewPortSmall() {
