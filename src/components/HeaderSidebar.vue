@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-app-bar clipped-left app color="white" height="100">
+      <v-icon>mdi-crown</v-icon>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
       <v-avatar tile class="profile" width="175" color="grey lighten-5" size="70">
@@ -13,7 +14,7 @@
       <v-list dense>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon @click="$vuetify.goTo('#home')">mdi-home</v-icon>
+            <v-icon @click="navigate('/home','home')">mdi-home</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Home</v-list-item-title>
@@ -21,7 +22,7 @@
         </v-list-item>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon @click="$vuetify.goTo('#about')">mdi-account</v-icon>
+            <v-icon @click="navigate('/home','about')">mdi-account</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>About US</v-list-item-title>
@@ -29,7 +30,7 @@
         </v-list-item>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon @click="$vuetify.goTo('#products')">mdi-cart</v-icon>
+            <v-icon @click="navigate('/home','products')">mdi-cart</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Products</v-list-item-title>
@@ -37,7 +38,15 @@
         </v-list-item>
         <v-list-item link>
           <v-list-item-action>
-            <v-icon @click="$vuetify.goTo('#contactus')">mdi-email</v-icon>
+            <v-icon @click="navigate('/shipping','home')">mdi-truck</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Products</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon @click="navigate('/home','contact')">mdi-email</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Contact</v-list-item-title>
@@ -56,6 +65,20 @@ export default {
       drawer: false,
       viewPortSmall: this.$vuetify.breakpoint.smAndDown
     };
+  },
+  methods: {
+    navigate(page, sectionID) {
+      this.$router.push({ path: page }).catch(err => {
+        if (err.name != "Error") {
+          console.error(err);
+        }
+      });
+
+      setTimeout(() => {
+        this.$vuetify.goTo("#" + sectionID);
+      }, 0);
+      console.log(sectionID);
+    }
   },
   mounted() {
     if (this.viewPortSmall === false) {

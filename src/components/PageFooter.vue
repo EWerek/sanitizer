@@ -1,5 +1,6 @@
 <template>
   <v-footer class="justify-center" color="#292929" height="100">
+    <v-icon>mdi-crown</v-icon>
     <div
       class="title font-weight-light grey--text text--lighten-1 text-center"
     >SanitizerKing &copy; {{ (new Date()).getFullYear() }}</div>
@@ -8,7 +9,7 @@
 
 <script>
 export default {
-  name: "footer",
+  name: "pageFooter",
   data() {
     return {};
   }

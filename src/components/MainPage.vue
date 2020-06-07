@@ -18,7 +18,7 @@
         <section id="features" class="grey lighten-3">
           <Features />
         </section>
-        <section id="contactus">
+        <section id="contact">
           <Contact />
         </section>
       </v-content>
