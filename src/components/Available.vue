@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container>
+    <v-container class="py-12">
       <v-responsive
         class="mx-auto title font-weight-light mb-8 red--text"
         max-width="720"
@@ -21,8 +21,6 @@
         </v-container>
       </v-parallax>
     </v-container>
-
-    <div class="py-12"></div>
   </div>
 </template>
 

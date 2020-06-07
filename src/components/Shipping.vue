@@ -3,12 +3,16 @@
     <v-app>
       <HeaderSidebar />
       <v-content>
-        <section id="home">
-          <div style="text-align: center;
-  border: 3px solid green;">
-            <h3>COMING SOON</h3>
-          </div>
-        </section>
+        <v-img
+          :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
+          src="@/assets/products/unresponse.png"
+        >
+          <section id="home">
+            <div style="text-align: center;">
+              <h3>COMING SOON</h3>
+            </div>
+          </section>
+        </v-img>
       </v-content>
       <PageFooter />
     </v-app>

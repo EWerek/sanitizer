@@ -1,13 +1,12 @@
 <template>
   <div>
-    <div class="py-12"></div>
     <v-container>
-      <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">PRODUCTS</h2>
+      <h2 class="display-1 font-weight-bold mb-3 text-uppercase text-center">PRODUCTS</h2>
       <v-responsive class="mx-auto mb-12" width="56">
         <v-divider class="mb-1"></v-divider>
         <v-divider></v-divider>
       </v-responsive>
-      <v-row>
+      <v-row style="text-align: center;">
         <v-col
           v-for="({ src, text, title, button, modalProps }, i) in products"
           :key="i"
@@ -15,36 +14,36 @@
           md="4"
         >
           <v-img :src="src" class="mb-4" height="70%" max-width="100%"></v-img>
-          <h3
-            class="font-weight-black mb-4 text-uppercase"
-            v-text="title"
-            style="text-align: center;"
-          ></h3>
-          <Modal v-bind="modalProps" />
-          <div class="title font-weight-light mb-5" v-text="text"></div>
+          <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
+          <div class="title font-weight-light" v-text="text"></div>
+          <Modal v-bind="modalProps" class="py-3" />
           <component :is="button"></component>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col v-for="({ src, text, title, button }, i) in products2" :key="i" cols="12" md="4">
-          <v-img :src="src" class="mb-4" height="80%" max-width="100%"></v-img>
-          <h3 class="font-weight-black mb-4 text-uppercase" v-text="title"></h3>
-          <Modal v-bind="modalProps" />
-          <div class="title font-weight-light mb-5" v-text="text"></div>
+      <v-row style="text-align: center;">
+        <v-col
+          v-for="({ src, text, title, button, modalProps }, i) in products2"
+          :key="i"
+          cols="12"
+          md="4"
+        >
+          <v-img :src="src" class="mb-4" height="70%" max-width="100%"></v-img>
+          <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
+          <div class="title font-weight-light" v-text="text"></div>
+          <Modal v-if="modalProps != ''" v-bind="modalProps" class="py-3" />
           <component :is="button"></component>
         </v-col>
       </v-row>
-      <div class="py-12"></div>
-      <BtnCart />
-      <BtnPayPal />
-      <div ref="paypalButton" style="text-align: center;"></div>
+      <v-icon @click="navigate('/shipping','home')" x-large>mdi-truck</v-icon>
+      <BtnCart class="py-4" />
+      <BtnPayPal class="py-4" />
     </v-container>
-    <div class="py-12"></div>
   </div>
 </template>
 
 <script>
-import BtnSingleBottle from "./BtnSingleBottle";
+import BtnBottle500ml from "./BtnBottle500ml";
+import BtnBottle32oz from "./BtnBottle32oz";
 import BtnCase from "./BtnCase";
 import BtnDispenser from "./BtnDispenser";
 import BtnCart from "./BtnCart";
@@ -56,7 +55,8 @@ import Modal from "./Modal";
 export default {
   name: "products",
   components: {
-    BtnSingleBottle,
+    BtnBottle500ml,
+    BtnBottle32oz,
     BtnCase,
     BtnDispenser,
     BtnCart,
@@ -69,50 +69,83 @@ export default {
     return {
       products: [
         {
-          src: require("@/assets/products/twobottles.png"),
-          title: "Single Bottles",
-          // text: "500mL ($12.99) & 32oz ($19.99)",
-          button: "BtnSingleBottle",
+          src: require("@/assets/products/casebottle1.png"),
+          title: "Case Four 1 Gallon Bottles",
+          text: "$325",
+          button: "BtnCase",
           modalProps: {
-            product: "Single Bottles",
+            product: "Four Gallon Case",
             info: "Specs/Shipping"
           }
         },
         {
-          src: require("@/assets/products/casebottle1.png"),
-          title: "Four Gallon Case",
-          //text: "Four 1 Gallon Bottles ($325)",
-          button: "BtnCase"
+          src: require("@/assets/products/bottle32oz.png"),
+          title: "Single Bottle 32oz",
+          text: "$19.99",
+          button: "BtnBottle32oz",
+          modalProps: {
+            product: "32oz Bottle",
+            info: "Specs/Shipping"
+          }
         },
         {
-          src: require("@/assets/products/dispenser1.png"),
-          title: "Wall Mount Dispenser",
-          // text: "Dispenser ($75)"
-          button: "BtnDispenser"
+          src: require("@/assets/products/bottle500ml.png"),
+          title: "Single Bottle 500ml",
+          text: "$12.99",
+          button: "BtnBottle500ml",
+          modalProps: {
+            product: "500 ml Bottle",
+            info: "Specs/Shipping"
+          }
         }
       ],
       products2: [
         {
+          src: require("@/assets/products/dispenser1.png"),
+          title: "Wall Mount Dispenser",
+          text: "$75",
+          button: "BtnDispenser",
+          modalProps: {
+            product: "Wall Mount Dispenser",
+            info: "Specs/Shipping"
+          }
+        },
+        {
           src: require("@/assets/products/stand.png"),
           title: "Metal Stand",
-          // text: "Dispenser ($75)"
-          button: "BtnStand"
+          text: "$145",
+          button: "BtnStand",
+          modalProps: {
+            product: "Metal Stand",
+            info: "Specs/Shipping"
+          }
         },
         {
           src: require("@/assets/products/glass.png"),
-          title: "Plexi-Glass Shield",
-          // text: "500mL ($12.99) & 32oz ($19.99)",
-          button: "BtnGlass"
-        },
-
-        {
-          src: require("@/assets/products/unPoster.jpg"),
-          title: "",
-          // text: "Dispenser ($75)"
-          button: ""
+          title: "Plexi-Glass Shield (30x30in Installed)",
+          text: "$300",
+          button: "BtnGlass",
+          modalProps: {
+            product: "Plexi-Glass Shield",
+            info: "Specs/Shipping"
+          }
         }
       ]
     };
+  },
+  methods: {
+    navigate(page, sectionID) {
+      this.$router.push({ path: page }).catch(err => {
+        if (err.name != "Error") {
+          console.error(err);
+        }
+      });
+
+      setTimeout(() => {
+        this.$vuetify.goTo("#" + sectionID);
+      }, 0);
+      console.log(sectionID);
+    }
   }
 };
 </script>

@@ -1,22 +1,7 @@
 <template>
   <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
     <input type="hidden" name="cmd" value="_s-xclick" />
-    <input type="hidden" name="hosted_button_id" value="JPW5787RNLLLU" />
-    <table>
-      <!-- <tr>
-        <td>
-          <input type="hidden" name="on0" value="Dispenser" />Dispenser
-        </td>
-      </tr>-->
-      <tr>
-        <td>
-          <select name="os0">
-            <option value="800ml">800ml $75.00 CAD</option>
-          </select>
-        </td>
-      </tr>
-    </table>
-    <input type="hidden" name="currency_code" value="CAD" />
+    <input type="hidden" name="hosted_button_id" value="J3VVM6NZC88MU" />
     <input
       type="image"
       src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"

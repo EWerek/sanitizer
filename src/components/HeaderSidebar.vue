@@ -1,8 +1,7 @@
 <template>
   <div>
-    <v-app-bar clipped-left app color="white" height="100">
-      <v-icon>mdi-crown</v-icon>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-app-bar clipped-left app color="white" height="70">
+      <v-icon @click.stop="drawer = !drawer" color="orange" large>mdi-crown</v-icon>
       <v-spacer></v-spacer>
       <v-avatar tile class="profile" width="175" color="grey lighten-5" size="70">
         <v-img src="@/assets/emslogo.jpg" />
