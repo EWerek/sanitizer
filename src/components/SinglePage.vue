@@ -109,7 +109,7 @@
             >
               <v-container fill-height>
                 <v-row class="mx-auto">
-                  <v-col v-for="[value, title] of stats" :key="title" cols="12" md="3">
+                  <v-col v-for="[value, title] of stats" :key="title" cols="20" md="4">
                     <div class="text-center">
                       <div class="display-1 font-weight-black mb-4 blue--text" v-html="value"></div>
 
@@ -119,6 +119,56 @@
                 </v-row>
               </v-container>
             </v-parallax>
+          </v-container>
+
+          <div class="py-12"></div>
+        </section>
+
+        <section id="products">
+          <div class="py-12"></div>
+
+          <v-container>
+            <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">PRODUCTS</h2>
+
+            <v-responsive class="mx-auto mb-12" width="56">
+              <v-divider class="mb-1"></v-divider>
+
+              <v-divider></v-divider>
+            </v-responsive>
+
+            <v-row>
+              <v-col
+                v-for="({ src, text, title, button }, i) in products"
+                :key="i"
+                cols="12"
+                md="4"
+              >
+                <v-img :src="src" class="mb-4" height="70%" max-width="100%"></v-img>
+
+                <h3 class="font-weight-black mb-4 text-uppercase" v-text="title"></h3>
+
+                <div class="title font-weight-light mb-5" v-text="text"></div>
+                <component :is="button"></component>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col
+                v-for="({ src, text, title, button }, i) in products2"
+                :key="i"
+                cols="12"
+                md="4"
+              >
+                <v-img :src="src" class="mb-4" height="80%" max-width="100%"></v-img>
+
+                <h3 class="font-weight-black mb-4 text-uppercase" v-text="title"></h3>
+
+                <div class="title font-weight-light mb-5" v-text="text"></div>
+                <component :is="button"></component>
+              </v-col>
+            </v-row>
+            <BtnCart />
+            <BtnPayPal />
+            <div ref="paypalButton" style="text-align: center;"></div>
           </v-container>
 
           <div class="py-12"></div>
@@ -156,41 +206,6 @@
                 </v-card>
               </v-col>
             </v-row>
-          </v-container>
-
-          <div class="py-12"></div>
-        </section>
-
-        <section id="products">
-          <div class="py-12"></div>
-
-          <v-container>
-            <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">PRODUCTS</h2>
-
-            <v-responsive class="mx-auto mb-12" width="56">
-              <v-divider class="mb-1"></v-divider>
-
-              <v-divider></v-divider>
-            </v-responsive>
-
-            <v-row>
-              <v-col
-                v-for="({ src, text, title, button }, i) in products"
-                :key="i"
-                cols="12"
-                md="4"
-              >
-                <v-img :src="src" class="mb-4" height="70%" max-width="100%"></v-img>
-
-                <h3 class="font-weight-black mb-4 text-uppercase" v-text="title"></h3>
-
-                <div class="title font-weight-light mb-5" v-text="text"></div>
-                <component :is="button"></component>
-              </v-col>
-            </v-row>
-            <BtnCart />
-            <BtnPayPal />
-            <div ref="paypalButton" style="text-align: center;"></div>
           </v-container>
 
           <div class="py-12"></div>
@@ -249,6 +264,8 @@ import BtnCase from "./BtnCase";
 import BtnDispenser from "./BtnDispenser";
 import BtnCart from "./BtnCart";
 import BtnPayPal from "./BtnPayPal";
+import BtnStand from "./BtnStand";
+import BtnGlass from "./BtnGlass";
 
 export default {
   name: "SanitizerKing",
@@ -257,7 +274,9 @@ export default {
     BtnCase,
     BtnDispenser,
     BtnCart,
-    BtnPayPal
+    BtnPayPal,
+    BtnStand,
+    BtnGlass
   },
   data() {
     return {
@@ -294,18 +313,39 @@ export default {
           button: "BtnDispenser"
         }
       ],
+      products2: [
+        {
+          src: require("@/assets/products/stand.png"),
+          title: "Metal Stand",
+          // text: "Dispenser ($75)"
+          button: "BtnStand"
+        },
+        {
+          src: require("@/assets/products/glass.png"),
+          title: "Plexi-Glass Shield",
+          // text: "500mL ($12.99) & 32oz ($19.99)",
+          button: "BtnGlass"
+        },
+
+        {
+          src: require("@/assets/products/unPoster.jpg"),
+          title: "",
+          // text: "Dispenser ($75)"
+          button: ""
+        }
+      ],
       features: [
         {
           icon: "mdi-virus",
           title: "Kills Pathogens",
           text:
-            "Contains 70% alcohol The use of hand sanitizers has been proven to reduce the risk of pathogens and cross contamination. Our Hand Sanitizer is effective against coronavirus"
+            "Our gel contains 70% alcohol The use of hand sanitizers has been proven to reduce the risk of pathogens and cross contamination. Our Hand Sanitizer is effective against coronavirus"
         },
         {
           icon: "mdi-tools",
           title: "Easy to Install",
           text:
-            "Practical and hygienic. Easy to top up. Wall mounted. Viewing window to check stock level. Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams"
+            "Our Dispensers are easy to install and top up. Wall mounted with tape or screws. Viewing window to check stock level. Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams"
         },
         {
           icon: "mdi-cellphone-basic",
@@ -318,7 +358,9 @@ export default {
         ["Single Bottles <br/>  500mL & 32oz", "$12.99 & $19.99"],
         ["Four Gallon <br/>  Case of Gel", "$325"],
         ["Wall Mount <br/>  Dispenser", "$75"],
-        ["Metal Stand<br/>  (4.5 ft)", "$145"]
+        ["Metal Stand<br/>  (4.5 ft)", "$145"],
+        [],
+        ["Plexi-Glass<br/>  Cut & Installed", "$300"]
       ]
     };
   },
