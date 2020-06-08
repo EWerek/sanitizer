@@ -148,7 +148,7 @@ export default {
           modalProps: {
             product: "Plexi-Glass Shield",
             info:
-              "The plexi-glass comes in 30 x 30 inch sheets and can be combined to make custom size shields.<br/><br/>The plexi-glass can also be cut to allow small objects to be passed through.<br/><br/>Delivery and installation within the GTA in included. "
+              "The plexi-glass comes in 30 x 30 inch sheets and can be combined to make custom size shields.<br/><br/>The plexi-glass can also be cut to allow small objects to be passed through.<br/><br/>Delivery and installation within the GTA is included. Please call for any questions 416-567-4811 "
           }
         }
       ]
