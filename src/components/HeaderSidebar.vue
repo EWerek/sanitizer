@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-app-bar clipped-left app color="white" height="70">
-      <v-icon @click.stop="drawer = !drawer" color="warning" large>mdi-crown</v-icon>
+      <v-icon @click.stop="drawer = !drawer" color="black" large>mdi-menu</v-icon>
       <v-spacer></v-spacer>
       <v-avatar tile class="profile" width="175" color="grey lighten-5" size="70">
-        <v-img src="@/assets/emslogo.jpg" />
+        <v-img src="@/assets/logos/logo3.png" />
       </v-avatar>
 
       <v-toolbar-title class="font-weight-black headline blue--text"></v-toolbar-title>

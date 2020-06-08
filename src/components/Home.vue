@@ -8,21 +8,22 @@
         <v-theme-provider dark>
           <v-container fill-height>
             <v-row align="center" class="blue--text mx-auto" justify="center">
-              <v-col class="text-center" cols="12" tag="h1" style="margin-bottom: 75px;">
+              <v-col class="text-center" cols="12" tag="h1" style="margin-bottom: 25px;">
+                <v-icon color="blue" size="75">mdi-crown-outline</v-icon>
+                <br />
                 <span
-                  :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']"
-                  class="font-weight-light white--text"
-                >EMS</span>
-
+                  :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
+                  class="font-weight-medium white--text"
+                >SANITIZER KING</span>
                 <br />
 
                 <span
-                  :class="[$vuetify.breakpoint.smAndDown ? 'display-1	': 'display-3']"
-                  class="font-weight-black"
-                >HAND SANITIZER</span>
+                  :class="[$vuetify.breakpoint.smAndDown ? 'title	': 'display-1']"
+                  class="font-weight-black blue--text"
+                >HAND GELS</span>
               </v-col>
 
-              <v-btn class="align-self-end" fab outlined @click="$vuetify.goTo('#about')">
+              <v-btn x-large class="align-self-end" fab outlined @click="$vuetify.goTo('#about')">
                 <v-icon>mdi-chevron-double-down</v-icon>
               </v-btn>
             </v-row>
@@ -35,7 +36,7 @@
 
 <script>
 export default {
-  name: "home",
+  name: "sidebar",
   data() {
     return {};
   }
