@@ -7,7 +7,8 @@
         max-width="720"
       >SANITIZER KING</v-responsive>-->
       <v-responsive
-        class="mx-auto title font-weight-light mb-8 danger--text"
+        :class="[$vuetify.breakpoint.smAndDown ? 'subtitle-1' : 'title']"
+        class="mx-auto font-weight-light mb-8 danger--text"
         max-width="720"
       >A DIVISION OF EXECUTIVE MAINTENANCE SERVICES</v-responsive>
 
