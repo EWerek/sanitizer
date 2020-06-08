@@ -21,7 +21,7 @@
         >
           <v-img :src="src" class="mb-4" height="70%" max-width="100%">
             <v-container>
-              <CadIcon class="float-sm-right" />
+              <CadIcon class="float-right" />
             </v-container>
           </v-img>
           <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
@@ -39,7 +39,7 @@
         >
           <v-img :src="src" class="mb-4" height="70%" max-width="100%">
             <v-container>
-              <CadIcon class="float-sm-right" />
+              <CadIcon class="float-right" />
             </v-container>
           </v-img>
           <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
