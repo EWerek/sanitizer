@@ -20,7 +20,9 @@
           md="4"
         >
           <v-img :src="src" class="mb-4" height="70%" max-width="100%">
-            <CadIcon class="float-sm-right" />
+            <v-container>
+              <CadIcon class="float-sm-right" />
+            </v-container>
           </v-img>
           <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
           <div class="title font-weight-light" v-text="text"></div>
@@ -36,7 +38,9 @@
           md="4"
         >
           <v-img :src="src" class="mb-4" height="70%" max-width="100%">
-            <CadIcon class="float-sm-right" />
+            <v-container>
+              <CadIcon class="float-sm-right" />
+            </v-container>
           </v-img>
           <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
           <div class="title font-weight-light" v-text="text"></div>
@@ -168,4 +172,12 @@ export default {
 </script>
 
 <style>
+.right {
+  right: 0;
+  position: fixed;
+}
+.container-scoped {
+  position: absolute;
+  bottom: 0px;
+}
 </style>
