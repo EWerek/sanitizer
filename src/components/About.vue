@@ -2,10 +2,10 @@
   <div>
     <div class="py-12"></div>
     <v-container class="text-center">
-      <v-responsive
+      <!-- <v-responsive
         class="mx-auto headline font-weight-medium mb-20 blue-grey--text"
         max-width="720"
-      >SANITIZER KING</v-responsive>
+      >SANITIZER KING</v-responsive>-->
       <v-responsive
         class="mx-auto title font-weight-light mb-8 danger--text"
         max-width="720"
@@ -15,6 +15,7 @@
       <v-avatar tile class="profile float-right" width="175" color="grey lighten-5" size="70">
         <v-img src="@/assets/emslogo.jpg" />
       </v-avatar>
+      <div class="py-12"></div>
       <v-responsive class="mx-auto mb-8" width="56">
         <v-divider class="mb-1"></v-divider>
       </v-responsive>

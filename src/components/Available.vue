@@ -2,7 +2,7 @@
   <div>
     <v-container class="py-12">
       <v-responsive
-        class="mx-auto title font-weight-light mb-8 red--text"
+        class="mx-auto title font-weight-light mb-8 danger--text"
         max-width="720"
         style="text-align: center;"
       >AVAILABLE</v-responsive>

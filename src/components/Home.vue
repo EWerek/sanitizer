@@ -9,7 +9,7 @@
           <v-container fill-height>
             <v-row align="center" class="blue--text mx-auto" justify="center">
               <v-col class="text-center" cols="12" tag="h1" style="margin-bottom: 25px;">
-                <v-icon color="blue" size="75">mdi-crown-outline</v-icon>
+                <v-icon color="blue" size="50">mdi-crown-outline</v-icon>
                 <br />
                 <span
                   :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
