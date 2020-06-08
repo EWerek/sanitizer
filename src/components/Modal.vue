@@ -6,7 +6,7 @@
       </template>
       <v-card>
         <v-card-title class="headline">{{product}}</v-card-title>
-        <v-card-text>{{info}}</v-card-text>
+        <v-card-text v-html="info"></v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="green darken-1" text @click="dialog = false">Back</v-btn>

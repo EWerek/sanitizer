@@ -40,10 +40,10 @@ export default {
             "Our gel contains 70% alcohol The use of hand sanitizers has been proven to reduce the risk of pathogens and cross contamination. Our Hand Sanitizer is effective against coronavirus"
         },
         {
-          icon: "mdi-tools",
-          title: "Easy to Install",
+          icon: "mdi-truck",
+          title: "Delivery",
           text:
-            "Our Dispensers are easy to install and top up. Wall mounted with tape or screws. Viewing window to check stock level. Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams"
+            "We delivery for free within the GTA. Normal delivery times are 2-4 bussiness days. Please call us for orders outside the GTA."
         },
         {
           icon: "mdi-cellphone-basic",

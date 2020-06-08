@@ -2,6 +2,12 @@
   <div>
     <v-container>
       <h2 class="display-1 font-weight-bold mb-3 text-uppercase text-center">PRODUCTS</h2>
+      <v-responsive
+        class="mx-auto title font-weight-light mb-8 red--text"
+        max-width="720"
+        style="text-align: center;"
+      >Made In Canada</v-responsive>
+
       <v-responsive class="mx-auto mb-12" width="56">
         <v-divider class="mb-1"></v-divider>
         <v-divider></v-divider>
@@ -13,7 +19,9 @@
           cols="12"
           md="4"
         >
-          <v-img :src="src" class="mb-4" height="70%" max-width="100%"></v-img>
+          <v-img :src="src" class="mb-4" height="70%" max-width="100%">
+            <CadIcon class="float-sm-right" />
+          </v-img>
           <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
           <div class="title font-weight-light" v-text="text"></div>
           <Modal v-bind="modalProps" class="py-3" />
@@ -27,7 +35,9 @@
           cols="12"
           md="4"
         >
-          <v-img :src="src" class="mb-4" height="70%" max-width="100%"></v-img>
+          <v-img :src="src" class="mb-4" height="70%" max-width="100%">
+            <CadIcon class="float-sm-right" />
+          </v-img>
           <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
           <div class="title font-weight-light" v-text="text"></div>
           <Modal v-if="modalProps != ''" v-bind="modalProps" class="py-3" />
@@ -51,6 +61,7 @@ import BtnPayPal from "./BtnPayPal";
 import BtnStand from "./BtnStand";
 import BtnGlass from "./BtnGlass";
 import Modal from "./Modal";
+import CadIcon from "./CustomIcon";
 
 export default {
   name: "products",
@@ -63,7 +74,8 @@ export default {
     BtnPayPal,
     BtnStand,
     BtnGlass,
-    Modal
+    Modal,
+    CadIcon
   },
   data() {
     return {
@@ -75,7 +87,8 @@ export default {
           button: "BtnCase",
           modalProps: {
             product: "Four Gallon Case",
-            info: "Specs/Shipping"
+            info:
+              "The case comes in four one gallon bottles.<br/><br/>Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
           }
         },
         {
@@ -85,7 +98,8 @@ export default {
           button: "BtnBottle32oz",
           modalProps: {
             product: "32oz Bottle",
-            info: "Specs/Shipping"
+            info:
+              "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
           }
         },
         {
@@ -95,7 +109,8 @@ export default {
           button: "BtnBottle500ml",
           modalProps: {
             product: "500 ml Bottle",
-            info: "Specs/Shipping"
+            info:
+              "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
           }
         }
       ],
@@ -107,7 +122,8 @@ export default {
           button: "BtnDispenser",
           modalProps: {
             product: "Wall Mount Dispenser",
-            info: "Specs/Shipping"
+            info:
+              "Our Dispensers are easy to install and top up. <br/><br/>Wall mounted with tape or screws. Viewing window to check stock level.<br/><br/> Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams"
           }
         },
         {
@@ -122,12 +138,13 @@ export default {
         },
         {
           src: require("@/assets/products/glass.png"),
-          title: "Plexi-Glass Shield (30x30in Installed)",
-          text: "$300",
+          title: "Plexi-Glass Shield (Installed)",
+          text: "$300 per sheet",
           button: "BtnGlass",
           modalProps: {
             product: "Plexi-Glass Shield",
-            info: "Specs/Shipping"
+            info:
+              "The plexi-glass comes in 30 x 30 inch sheets and can be combined to make custom size shields.<br/><br/>The plexi-glass can also be cut to allow small objects to be passed through.<br/><br/>Delivery and installation within the GTA in included. "
           }
         }
       ]

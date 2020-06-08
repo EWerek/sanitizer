@@ -2,18 +2,27 @@
   <div id="app">
     <v-app>
       <HeaderSidebar />
-      <v-content>
-        <v-img
-          :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-          src="@/assets/products/unresponse.png"
-        >
-          <section id="home">
-            <div style="text-align: center;">
-              <h3>COMING SOON</h3>
-            </div>
-          </section>
-        </v-img>
-      </v-content>
+      <section id="home">
+        <v-content>
+          <v-img
+            :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
+            src="@/assets/products/unresponse.png"
+          >
+            <v-theme-provider dark>
+              <v-container fill-height>
+                <v-row align="center" class="blue--text mx-auto" justify="center">
+                  <v-col class="text-center" cols="12" tag="h1" style="margin-bottom: 75px;">
+                    <span
+                      :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']"
+                      class="font-weight-light black--text"
+                    >We delivery for free within the GTA. Normal delivery times are 2-4 bussiness days. Please call us for orders outside the GTA.</span>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-theme-provider>
+          </v-img>
+        </v-content>
+      </section>
       <PageFooter />
     </v-app>
   </div>
