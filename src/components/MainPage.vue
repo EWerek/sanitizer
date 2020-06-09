@@ -10,7 +10,6 @@
           <About />
         </section>
         <section id="Available">
-          <div class="py-12"></div>
           <Available />
         </section>
         <section id="products">

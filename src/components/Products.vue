@@ -14,14 +14,16 @@
       </v-responsive>
       <v-row style="text-align: center;">
         <v-col
-          v-for="({ src, text, title, button, modalProps }, i) in products"
+          v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products"
           :key="i"
           cols="12"
           md="4"
         >
           <v-img :src="src" class="mb-4" height="70%" max-width="100%">
             <v-container>
-              <CadIcon class="float-right" />
+              <v-avatar class="float-right" size="70">
+                <v-img :src="cornerImage" />
+              </v-avatar>
             </v-container>
           </v-img>
           <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
@@ -32,14 +34,16 @@
       </v-row>
       <v-row style="text-align: center;">
         <v-col
-          v-for="({ src, text, title, button, modalProps }, i) in products2"
+          v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products2"
           :key="i"
           cols="12"
           md="4"
         >
           <v-img :src="src" class="mb-4" height="70%" max-width="100%">
             <v-container>
-              <CadIcon class="float-right" />
+              <v-avatar class="float-right" size="70">
+                <v-img :src="cornerImage" />
+              </v-avatar>
             </v-container>
           </v-img>
           <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
@@ -65,7 +69,6 @@ import BtnPayPal from "./BtnPayPal";
 import BtnStand from "./BtnStand";
 import BtnGlass from "./BtnGlass";
 import Modal from "./Modal";
-import CadIcon from "./CustomIcon";
 
 export default {
   name: "products",
@@ -78,8 +81,7 @@ export default {
     BtnPayPal,
     BtnStand,
     BtnGlass,
-    Modal,
-    CadIcon
+    Modal
   },
   data() {
     return {
@@ -93,7 +95,8 @@ export default {
             product: "Four Gallon Case",
             info:
               "The case comes in four one gallon bottles.<br/><br/>Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
-          }
+          },
+          cornerImage: require("@/assets/madeincanada.png")
         },
         {
           src: require("@/assets/products/bottle32oz.png"),
@@ -104,7 +107,8 @@ export default {
             product: "32oz Bottle",
             info:
               "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
-          }
+          },
+          cornerImage: require("@/assets/madeincanada.png")
         },
         {
           src: require("@/assets/products/bottle500ml.png"),
@@ -115,7 +119,8 @@ export default {
             product: "500 ml Bottle",
             info:
               "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
-          }
+          },
+          cornerImage: require("@/assets/madeincanada.png")
         }
       ],
       products2: [
@@ -128,7 +133,8 @@ export default {
             product: "Wall Mount Dispenser",
             info:
               "Our Dispensers are easy to install and top up. <br/><br/>Wall mounted with tape or screws. Viewing window to check stock level.<br/><br/> Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams"
-          }
+          },
+          cornerImage: require("@/assets/logos/logo3.png")
         },
         {
           src: require("@/assets/products/stand.png"),
@@ -138,7 +144,8 @@ export default {
           modalProps: {
             product: "Metal Stand",
             info: "Specs/Shipping"
-          }
+          },
+          cornerImage: require("@/assets/madeincanada.png")
         },
         {
           src: require("@/assets/products/glass.png"),
@@ -149,7 +156,8 @@ export default {
             product: "Plexi-Glass Shield",
             info:
               "The plexi-glass comes in 30 x 30 inch sheets and can be combined to make custom size shields.<br/><br/>The plexi-glass can also be cut to allow small objects to be passed through.<br/><br/>Delivery and installation within the GTA is included. Please call for any questions 416-567-4811 "
-          }
+          },
+          cornerImage: require("@/assets/madeincanada.png")
         }
       ]
     };

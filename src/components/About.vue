@@ -7,16 +7,17 @@
         max-width="720"
       >SANITIZER KING</v-responsive>-->
       <v-responsive
-        :class="[$vuetify.breakpoint.smAndDown ? 'subtitle-1' : 'title']"
+        :class="[$vuetify.breakpoint.smAndDown ? 'subtitle-2' : 'title']"
         class="mx-auto font-weight-light mb-8 danger--text"
         max-width="720"
       >A DIVISION OF EXECUTIVE MAINTENANCE SERVICES</v-responsive>
 
       <p :class="[$vuetify.breakpoint.smAndDown ? 'body-1' : 'title']" v-html="mainParagraph" />
-      <v-avatar tile class="profile float-right" width="175" color="grey lighten-5" size="70">
-        <v-img src="@/assets/emslogo.jpg" />
+
+      <v-avatar tile class="profile float-center py-4" width="30%" height="30%">
+        <v-img src="@/assets/emssleak.png" />
       </v-avatar>
-      <div class="py-12"></div>
+
       <v-responsive class="mx-auto mb-8" width="56">
         <v-divider class="mb-1"></v-divider>
       </v-responsive>
