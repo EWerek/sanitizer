@@ -99,7 +99,7 @@ export default {
           cornerImage: require("@/assets/madeincanada.png")
         },
         {
-          src: require("@/assets/products/bottle32oz.png"),
+          src: require("@/assets/logos/bottle32ozlogo1.jpg"),
           title: "Single Bottle 32oz",
           text: "$19.99",
           button: "BtnBottle32oz",
@@ -111,7 +111,7 @@ export default {
           cornerImage: require("@/assets/madeincanada.png")
         },
         {
-          src: require("@/assets/products/bottle500ml.png"),
+          src: require("@/assets/logos/bottle500mllogo2.jpg"),
           title: "Single Bottle 500ml",
           text: "$12.99",
           button: "BtnBottle500ml",
