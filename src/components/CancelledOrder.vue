@@ -4,15 +4,14 @@
       <v-container fill-height fluid>
         <v-row align="center" justify="center">
           <v-col>
-            <v-img src="@/assets/logos/cancelledorder.png">
-              <v-container>
-                <v-row align="center" justify="center">
-                  <v-btn color="red" large fab @click="navigate('/home','home')">
-                    <v-icon>mdi-chevron-double-up</v-icon>
-                  </v-btn>
-                </v-row>
-              </v-container>
-            </v-img>
+            <v-container>
+              <v-row align="center" justify="center">
+                <v-btn color="red" large fab @click="navigate('/home','home')">
+                  <v-icon>mdi-chevron-double-up</v-icon>
+                </v-btn>
+              </v-row>
+            </v-container>
+            <v-img src="@/assets/logos/cancelledorder.png"></v-img>
           </v-col>
         </v-row>
       </v-container>
