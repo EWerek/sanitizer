@@ -7,7 +7,10 @@
         style="text-align: center;"
       >AVAILABLE</v-responsive>
 
-      <v-parallax :height="$vuetify.breakpoint.smAndDown ? 1900 : 500" src="@/assets/hand1.png">
+      <v-parallax
+        :height="$vuetify.breakpoint.smAndDown ? 1900 : 500"
+        src="@/assets/splashpages/hand1.png"
+      >
         <v-container fill-height>
           <v-row class="mx-auto">
             <v-col v-for="[value, title] of available" :key="title" cols="20" md="4">

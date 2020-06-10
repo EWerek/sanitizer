@@ -87,7 +87,7 @@ export default {
     return {
       products: [
         {
-          src: require("@/assets/products/casebottle1.png"),
+          src: require("@/assets/products/gallonbottle.png"),
           title: "Case Four 1 Gallon Bottles",
           text: "$325",
           button: "BtnCase",
@@ -96,10 +96,10 @@ export default {
             info:
               "The case comes in four one gallon bottles.<br/><br/>Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
           },
-          cornerImage: require("@/assets/madeincanada.png")
+          cornerImage: require("@/assets/logos/madeincanada.png")
         },
         {
-          src: require("@/assets/logos/bottle32ozlogo1.jpg"),
+          src: require("@/assets/products/bottle32oz.jpg"),
           title: "Single Bottle 32oz",
           text: "$19.99",
           button: "BtnBottle32oz",
@@ -108,10 +108,10 @@ export default {
             info:
               "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
           },
-          cornerImage: require("@/assets/madeincanada.png")
+          cornerImage: require("@/assets/logos/madeincanada.png")
         },
         {
-          src: require("@/assets/logos/bottle500mllogo2.jpg"),
+          src: require("@/assets/products/bottle500ml.jpg"),
           title: "Single Bottle 500ml",
           text: "$12.99",
           button: "BtnBottle500ml",
@@ -120,12 +120,12 @@ export default {
             info:
               "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
           },
-          cornerImage: require("@/assets/madeincanada.png")
+          cornerImage: require("@/assets/logos/madeincanada.png")
         }
       ],
       products2: [
         {
-          src: require("@/assets/products/dispenser1.png"),
+          src: require("@/assets/products/dispenser.png"),
           title: "Wall Mount Dispenser",
           text: "$75 (Currently out of stock)",
           button: "BtnDispenser",
@@ -145,7 +145,7 @@ export default {
             product: "Metal Stand",
             info: "Specs/Shipping"
           },
-          cornerImage: require("@/assets/madeincanada.png")
+          cornerImage: require("@/assets/logos/madeincanada.png")
         },
         {
           src: require("@/assets/products/glass.png"),
@@ -157,7 +157,7 @@ export default {
             info:
               "The plexi-glass comes in 30 x 30 inch sheets and can be combined to make custom size shields.<br/><br/>The plexi-glass can also be cut to allow small objects to be passed through.<br/><br/>Delivery and installation within the GTA is included. Please call for any questions 416-567-4811 "
           },
-          cornerImage: require("@/assets/madeincanada.png")
+          cornerImage: require("@/assets/logos/madeincanada.png")
         }
       ]
     };

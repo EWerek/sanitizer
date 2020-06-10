@@ -6,7 +6,7 @@
         <v-content>
           <v-img
             :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-            src="@/assets/products/unresponse.png"
+            src="@/assets/splashpages/unresponse.png"
           >
             <v-theme-provider dark>
               <v-container fill-height>

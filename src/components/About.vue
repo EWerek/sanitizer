@@ -15,7 +15,7 @@
       <p :class="[$vuetify.breakpoint.smAndDown ? 'body-1' : 'title']" v-html="mainParagraph" />
 
       <v-avatar tile class="profile float-center py-4" width="60%" height="60%">
-        <v-img src="@/assets/emssleak.png" />
+        <v-img src="@/assets/logos/emssleak.png" />
       </v-avatar>
 
       <v-responsive class="mx-auto mb-8" width="56">

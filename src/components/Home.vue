@@ -3,7 +3,7 @@
     <v-row no-gutters>
       <v-img
         :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-        src="@/assets/covid.png"
+        src="@/assets/splashpages/covid.png"
       >
         <v-theme-provider dark>
           <v-container fill-height>
@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: "sidebar",
+  name: "home",
   data() {
     return {};
   }
