@@ -3,8 +3,8 @@
     <v-app-bar clipped-left app color="white" height="70">
       <v-icon @click.stop="drawer = !drawer" color="black" large>mdi-menu</v-icon>
       <v-spacer></v-spacer>
-      <v-avatar size="105">
-        <v-img height="100%" width="100%" contain src="@/assets/logos/blackLogoNoBack.png" />
+      <v-avatar size="72">
+        <v-img height="100%" width="100%" contain src="@/assets/logos/roundking.png" />
       </v-avatar>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" clipped left app mini-variant color="blue">
