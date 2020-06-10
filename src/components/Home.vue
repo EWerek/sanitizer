@@ -9,7 +9,7 @@
           <v-container fill-height>
             <v-row align="center" class="blue--text mx-auto" justify="center">
               <v-col class="text-center" cols="12" tag="h1" style="margin-bottom: 85px;">
-                <v-avatar tile class="profile" width="375" size="170">
+                <v-avatar tile width="375" size="150">
                   <v-img src="@/assets/logos/home13.png" />
                 </v-avatar>
                 <!-- <v-icon color="blue" size="50">mdi-crown-outline</v-icon>
