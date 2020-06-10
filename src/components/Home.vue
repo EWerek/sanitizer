@@ -8,8 +8,11 @@
         <v-theme-provider dark>
           <v-container fill-height>
             <v-row align="center" class="blue--text mx-auto" justify="center">
-              <v-col class="text-center" cols="12" tag="h1" style="margin-bottom: 25px;">
-                <v-icon color="blue" size="50">mdi-crown-outline</v-icon>
+              <v-col class="text-center" cols="12" tag="h1" style="margin-bottom: 85px;">
+                <v-avatar tile class="profile" width="375" size="170">
+                  <v-img src="@/assets/logos/home13.png" />
+                </v-avatar>
+                <!-- <v-icon color="blue" size="50">mdi-crown-outline</v-icon>
                 <br />
                 <span
                   :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-2']"
@@ -20,7 +23,7 @@
                 <span
                   :class="[$vuetify.breakpoint.smAndDown ? 'title	': 'display-1']"
                   class="font-weight-black blue--text"
-                >HAND GELS</span>
+                >HAND GELS</span>-->
               </v-col>
 
               <v-btn x-large class="align-self-end" fab outlined @click="$vuetify.goTo('#about')">

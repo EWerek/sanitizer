@@ -6,7 +6,6 @@
       <v-avatar tile class="profile" width="175" size="70">
         <v-img src="@/assets/logos/logo3.png" />
       </v-avatar>
-
       <v-toolbar-title class="font-weight-black headline blue--text"></v-toolbar-title>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" clipped left app mini-variant color="blue">
