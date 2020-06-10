@@ -1,23 +1,22 @@
 <template>
   <div>
-    <v-row>
-      <v-container fill-height>
-        <v-img src="@/assets/logos/cancelledorder.png">
-          <v-row align="center" justify="center">
-            <v-btn
-              style="margin-top: 300px;margin-left:170px;"
-              x-large
-              class="align-self-end"
-              fab
-              outlined
-              @click="navigate('/home','home')"
-            >
-              <v-icon>mdi-chevron-double-down</v-icon>
-            </v-btn>
-          </v-row>
-        </v-img>
+    <v-app>
+      <v-container fill-height fluid>
+        <v-row align="center" justify="center">
+          <v-col>
+            <v-img src="@/assets/logos/cancelledorder.png">
+              <v-container>
+                <v-row align="center" justify="center">
+                  <v-btn color="red" large fab @click="navigate('/home','home')">
+                    <v-icon>mdi-chevron-double-up</v-icon>
+                  </v-btn>
+                </v-row>
+              </v-container>
+            </v-img>
+          </v-col>
+        </v-row>
       </v-container>
-    </v-row>
+    </v-app>
   </div>
 </template>
 
@@ -45,3 +44,7 @@ export default {
 
 <style>
 </style>
+
+
+
+
