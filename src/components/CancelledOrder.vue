@@ -1,20 +1,27 @@
 <template>
   <div>
-    <v-row no-gutters>
-      <v-img src="@/assets/logos/colorLogoNoBack.png">
-        <v-theme-provider dark>
-          <v-container fill-height>
-            <v-row>
-              <v-btn x-large class="align-self-end" fab outlined @click="navigate('/home','home')">
-                <v-icon>mdi-chevron-double-down</v-icon>
-              </v-btn>
-            </v-row>
-          </v-container>
-        </v-theme-provider>
-      </v-img>
+    <v-row>
+      <v-container fill-height>
+        <v-img src="@/assets/logos/cancelledorder.png">
+          <v-row align="center" justify="center">
+            <v-btn
+              style="margin-top: 300px;margin-left:170px;"
+              x-large
+              class="align-self-end"
+              fab
+              outlined
+              @click="navigate('/home','home')"
+            >
+              <v-icon>mdi-chevron-double-down</v-icon>
+            </v-btn>
+          </v-row>
+        </v-img>
+      </v-container>
     </v-row>
   </div>
 </template>
+
+    
 
 <script>
 export default {
