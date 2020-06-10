@@ -3,10 +3,9 @@
     <v-app-bar clipped-left app color="white" height="70">
       <v-icon @click.stop="drawer = !drawer" color="black" large>mdi-menu</v-icon>
       <v-spacer></v-spacer>
-      <v-avatar tile class="profile" width="175" size="70">
-        <v-img src="@/assets/logos/logo3.png" />
+      <v-avatar>
+        <v-img height="120%" width="120%" contain src="@/assets/logos/roundking.png" />
       </v-avatar>
-      <v-toolbar-title class="font-weight-black headline blue--text"></v-toolbar-title>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" clipped left app mini-variant color="blue">
       <v-list dense>

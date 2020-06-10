@@ -134,7 +134,7 @@ export default {
             info:
               "Our Dispensers are easy to install and top up. <br/><br/>Wall mounted with tape or screws. Viewing window to check stock level.<br/><br/> Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams"
           },
-          cornerImage: require("@/assets/logos/logo3.png")
+          cornerImage: require("@/assets/logos/roundking.png")
         },
         {
           src: require("@/assets/products/stand.png"),
