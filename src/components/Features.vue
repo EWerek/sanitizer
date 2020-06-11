@@ -3,7 +3,7 @@
     <div class="py-12"></div>
     <v-container>
       <v-row justify="center" align="center" class="py-0 my-0">
-        <v-avatar class="mx-auto" size="300" style="margin-top: -150px; margin-bottom: -100px;">
+        <v-avatar class="mx-auto" size="275px" style="margin-top: -150px; margin-bottom: -100px;">
           <v-img height="100%" width="100%" contain src="@/assets/logos/featureslogo2.png" />
         </v-avatar>
       </v-row>

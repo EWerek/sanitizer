@@ -2,7 +2,7 @@
   <div>
     <v-container>
       <v-row justify="center" align="center" class="py-0 my-0">
-        <v-avatar class="mx-auto" size="300" style="margin-top: -0; margin-bottom: -0;">
+        <v-avatar class="mx-auto" size="275px" style="margin-top: -0; margin-bottom: -0;">
           <v-img height="100%" width="100%" contain src="@/assets/logos/productslogo3.png" />
         </v-avatar>
       </v-row>
@@ -35,7 +35,7 @@
           v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products2"
           :key="i"
           cols="12"
-          md="4"
+          md="6"
         >
           <v-img :src="src" class="mb-4" height="70%" max-width="100%">
             <v-container>
@@ -60,6 +60,7 @@
 <script>
 import BtnBottle500ml from "./BtnBottle500ml";
 import BtnBottle32oz from "./BtnBottle32oz";
+import BtnSingleBottles from "./BtnSingleBottles";
 import BtnCase from "./BtnCase";
 import BtnDispenser from "./BtnDispenser";
 import BtnCart from "./BtnCart";
@@ -80,12 +81,25 @@ export default {
     BtnPayPal,
     BtnStand,
     BtnGlass,
+    BtnSingleBottles,
     Modal,
     LogoHeader
   },
   data() {
     return {
       products: [
+        {
+          src: require("@/assets/products/twobottles.png"),
+          title: "Single Bottles 500ml/32oz",
+          text: "$12.99/$19.99",
+          button: "BtnSingleBottles",
+          modalProps: {
+            product: "Single Bottles",
+            info:
+              "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
+          },
+          cornerImage: require("@/assets/logos/madeincanada.png")
+        },
         {
           src: require("@/assets/products/gallonbottle.png"),
           title: "Case Four 1 Gallon Bottles",
@@ -99,32 +113,6 @@ export default {
           cornerImage: require("@/assets/logos/madeincanada.png")
         },
         {
-          src: require("@/assets/products/bottle32oz.jpg"),
-          title: "Single Bottle 32oz",
-          text: "$19.99",
-          button: "BtnBottle32oz",
-          modalProps: {
-            product: "32oz Bottle",
-            info:
-              "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
-          },
-          cornerImage: require("@/assets/logos/madeincanada.png")
-        },
-        {
-          src: require("@/assets/products/bottle500ml.jpg"),
-          title: "Single Bottle 500ml",
-          text: "$12.99",
-          button: "BtnBottle500ml",
-          modalProps: {
-            product: "500 ml Bottle",
-            info:
-              "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
-          },
-          cornerImage: require("@/assets/logos/madeincanada.png")
-        }
-      ],
-      products2: [
-        {
           src: require("@/assets/products/dispenser.png"),
           title: "Wall Mount Dispenser",
           text: "$75 (Currently out of stock)",
@@ -135,7 +123,22 @@ export default {
               "Our Dispensers are easy to install and top up. <br/><br/>Wall mounted with tape or screws. Viewing window to check stock level.<br/><br/> Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams"
           },
           cornerImage: require("@/assets/logos/roundking.png")
-        },
+        }
+
+        // {
+        //   src: require("@/assets/products/bottle500ml.jpg"),
+        //   title: "Single Bottle 500ml",
+        //   text: "$12.99",
+        //   button: "BtnBottle500ml",
+        //   modalProps: {
+        //     product: "500 ml Bottle",
+        //     info:
+        //       "Our Gel conforms to all health Canada guidelines and has been certified by the Canadian Food Inspection Agency (CFIA) including a Natural Product Number (NPN).<br/><br/>The gel contains Ethyl alcohol, Isopropyl alcohol, carbomer, Glycerine and Triethanolamine "
+        //   },
+        //   cornerImage: require("@/assets/logos/madeincanada.png")
+        // }
+      ],
+      products2: [
         {
           src: require("@/assets/products/stand.png"),
           title: "Metal Stand",
