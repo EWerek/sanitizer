@@ -1,28 +1,27 @@
 <template>
-  <div>
-    <div class="py-12"></div>
+  <v-app class="pt-12">
     <v-container class="text-center">
-      <!-- <v-responsive
-        class="mx-auto headline font-weight-medium mb-20 blue-grey--text"
-        max-width="720"
-      >SANITIZER KING</v-responsive>-->
-      <v-responsive
-        :class="[$vuetify.breakpoint.smAndDown ? 'subtitle-2' : 'title']"
-        class="mx-auto font-weight-light mb-8 danger--text"
-        max-width="720"
-      >A DIVISION OF EXECUTIVE MAINTENANCE SERVICES</v-responsive>
+      <!-- -->
+      <v-row justify="center" align="center" class="py-0 my-0">
+        <v-col>
+          <h2
+            :class="[$vuetify.breakpoint.smAndDown ? 'subtitle-2' : 'title']"
+            class="mx-auto font-weight-light danger--text"
+          >A DIVISION OF</h2>
+
+          <v-avatar class="mx-auto" size="300" style="margin-top: -125px; margin-bottom: -100px;">
+            <v-img height="100%" width="100%" contain src="@/assets/logos/emslast.png" />
+          </v-avatar>
+        </v-col>
+      </v-row>
 
       <p :class="[$vuetify.breakpoint.smAndDown ? 'body-1' : 'title']" v-html="mainParagraph" />
-
-      <v-avatar tile class="profile float-center py-4" width="60%" height="60%">
-        <v-img src="@/assets/logos/emssleak.png" />
-      </v-avatar>
 
       <v-responsive class="mx-auto mb-8" width="56">
         <v-divider class="mb-1"></v-divider>
       </v-responsive>
     </v-container>
-  </div>
+  </v-app>
 </template>
 
 <script>

@@ -5,7 +5,7 @@
       <v-container>
         <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Contact Us</h2>
         <v-responsive
-          class="mx-auto title font-weight-light mb-8 orange--text"
+          class="mx-auto title font-weight-light mb-8 blue--text"
           max-width="720"
           style="text-align: center;"
         >416-567-4811</v-responsive>

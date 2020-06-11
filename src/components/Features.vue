@@ -1,8 +1,12 @@
 <template>
   <div>
     <div class="py-12"></div>
+    <v-row justify="center" align="center" class="py-0 my-0">
+      <v-avatar class="mx-auto" size="500" style="margin-top: -150px; margin-bottom: -100px;">
+        <v-img height="100%" width="100%" contain src="@/assets/logos/featureslogo2.png" />
+      </v-avatar>
+    </v-row>
     <v-container class="text-center">
-      <h2 class="display-1 font-weight-bold mb-3">FEATURES</h2>
       <v-responsive class="mx-auto mb-12" width="56">
         <v-divider class="mb-1"></v-divider>
         <v-divider></v-divider>

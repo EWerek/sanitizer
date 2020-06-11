@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <v-container class="py-12">
-      <v-responsive
-        class="mx-auto title font-weight-light mb-8 danger--text"
-        max-width="720"
-        style="text-align: center;"
-      >AVAILABLE</v-responsive>
+  <v-app>
+    <v-container>
+      <v-row justify="center" align="center" class="py-0 my-0">
+        <v-avatar class="mx-auto" size="500" style="margin-top: -700px; margin-bottom: -100px;">
+          <v-img height="100%" width="100%" contain src="@/assets/logos/availablelogo.png" />
+        </v-avatar>
+      </v-row>
 
       <v-parallax
         :height="$vuetify.breakpoint.smAndDown ? 1900 : 500"
@@ -24,7 +24,7 @@
         </v-container>
       </v-parallax>
     </v-container>
-  </div>
+  </v-app>
 </template>
 
 <script>
