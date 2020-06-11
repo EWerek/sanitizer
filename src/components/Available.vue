@@ -1,12 +1,11 @@
 <template>
-  <v-app>
+  <div style="margin-bottom: 0px;">
+    <v-row justify="center" align="center" class="py-0 my-0">
+      <v-avatar class="mx-auto" size="275px">
+        <v-img height="100%" width="100%" contain src="@/assets/logos/availablelogo.png" />
+      </v-avatar>
+    </v-row>
     <v-container>
-      <v-row justify="center" align="center" class="py-0 my-0">
-        <v-avatar class="mx-auto" size="500" style="margin-top: -700px; margin-bottom: -100px;">
-          <v-img height="100%" width="100%" contain src="@/assets/logos/availablelogo.png" />
-        </v-avatar>
-      </v-row>
-
       <v-parallax
         :height="$vuetify.breakpoint.smAndDown ? 1900 : 500"
         src="@/assets/splashpages/hand1.png"
@@ -24,7 +23,7 @@
         </v-container>
       </v-parallax>
     </v-container>
-  </v-app>
+  </div>
 </template>
 
 <script>

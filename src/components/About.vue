@@ -1,5 +1,5 @@
 <template>
-  <v-app class="pt-12">
+  <div class="pt-12">
     <v-container class="text-center">
       <!-- -->
       <v-row justify="center" align="center" class="py-0 my-0">
@@ -9,7 +9,7 @@
             class="mx-auto font-weight-light danger--text"
           >A DIVISION OF</h2>
 
-          <v-avatar class="mx-auto" size="300" style="margin-top: -125px; margin-bottom: -100px;">
+          <v-avatar class="mx-auto" size="200" style="margin-top: -75px; margin-bottom: -80px;">
             <v-img height="100%" width="100%" contain src="@/assets/logos/emslast.png" />
           </v-avatar>
         </v-col>
@@ -21,7 +21,7 @@
         <v-divider class="mb-1"></v-divider>
       </v-responsive>
     </v-container>
-  </v-app>
+  </div>
 </template>
 
 <script>

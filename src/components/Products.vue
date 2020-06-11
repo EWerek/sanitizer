@@ -1,61 +1,59 @@
 <template>
   <div>
-    <v-app>
-      <v-container>
-        <v-row justify="center" align="center" class="py-0 my-0">
-          <v-avatar class="mx-auto" size="500" style="margin-top: -300px; margin-bottom: -100px;">
-            <v-img height="100%" width="100%" contain src="@/assets/logos/productslogo3.png" />
-          </v-avatar>
-        </v-row>
-        <v-responsive class="mx-auto mb-10" width="200">
-          <v-divider class="mb-1"></v-divider>
-          <v-divider></v-divider>
-        </v-responsive>
-        <v-row style="text-align: center;">
-          <v-col
-            v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products"
-            :key="i"
-            cols="12"
-            md="4"
-          >
-            <v-img :src="src" class="mb-4" height="70%" max-width="100%">
-              <v-container>
-                <v-avatar class="float-right" size="70">
-                  <v-img :src="cornerImage" />
-                </v-avatar>
-              </v-container>
-            </v-img>
-            <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
-            <div class="title font-weight-light" v-text="text"></div>
-            <Modal v-bind="modalProps" class="py-3" />
-            <component :is="button"></component>
-          </v-col>
-        </v-row>
-        <v-row style="text-align: center;">
-          <v-col
-            v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products2"
-            :key="i"
-            cols="12"
-            md="4"
-          >
-            <v-img :src="src" class="mb-4" height="70%" max-width="100%">
-              <v-container>
-                <v-avatar class="float-right" size="70">
-                  <v-img :src="cornerImage" />
-                </v-avatar>
-              </v-container>
-            </v-img>
-            <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
-            <div class="title font-weight-light" v-text="text"></div>
-            <Modal v-if="modalProps != ''" v-bind="modalProps" class="py-3" />
-            <component :is="button"></component>
-          </v-col>
-        </v-row>
-        <v-icon @click="navigate('/shipping','home')" x-large>mdi-truck</v-icon>
-        <BtnCart class="py-4" />
-        <BtnPayPal class="py-4" />
-      </v-container>
-    </v-app>
+    <v-container>
+      <v-row justify="center" align="center" class="py-0 my-0">
+        <v-avatar class="mx-auto" size="300" style="margin-top: -0; margin-bottom: -0;">
+          <v-img height="100%" width="100%" contain src="@/assets/logos/productslogo3.png" />
+        </v-avatar>
+      </v-row>
+      <v-responsive class="mx-auto mb-12" width="56">
+        <v-divider class="mb-1"></v-divider>
+        <v-divider></v-divider>
+      </v-responsive>
+      <v-row style="text-align: center;">
+        <v-col
+          v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products"
+          :key="i"
+          cols="12"
+          md="4"
+        >
+          <v-img :src="src" class="mb-4" height="70%" max-width="100%">
+            <v-container>
+              <v-avatar class="float-right" size="70">
+                <v-img :src="cornerImage" />
+              </v-avatar>
+            </v-container>
+          </v-img>
+          <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
+          <div class="title font-weight-light" v-text="text"></div>
+          <Modal v-bind="modalProps" class="py-3" />
+          <component :is="button"></component>
+        </v-col>
+      </v-row>
+      <v-row style="text-align: center;">
+        <v-col
+          v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products2"
+          :key="i"
+          cols="12"
+          md="4"
+        >
+          <v-img :src="src" class="mb-4" height="70%" max-width="100%">
+            <v-container>
+              <v-avatar class="float-right" size="70">
+                <v-img :src="cornerImage" />
+              </v-avatar>
+            </v-container>
+          </v-img>
+          <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
+          <div class="title font-weight-light" v-text="text"></div>
+          <Modal v-if="modalProps != ''" v-bind="modalProps" class="py-3" />
+          <component :is="button"></component>
+        </v-col>
+      </v-row>
+      <v-icon @click="navigate('/shipping','home')" x-large>mdi-truck</v-icon>
+      <BtnCart class="py-4" />
+      <BtnPayPal class="py-4" />
+    </v-container>
   </div>
 </template>
 

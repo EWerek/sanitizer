@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <v-row no-gutters>
       <v-img
         :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
@@ -34,7 +34,7 @@
         </v-container>
       </v-img>
     </v-row>
-  </v-app>
+  </div>
 </template>
 
 <script>
