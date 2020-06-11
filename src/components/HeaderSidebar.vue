@@ -3,7 +3,7 @@
     <v-app-bar clipped-left app color="white" height="70">
       <v-icon @click.stop="drawer = !drawer" color="black" large>mdi-menu</v-icon>
       <v-spacer></v-spacer>
-      <v-avatar size="65">
+      <v-avatar size="60">
         <v-img height="100%" width="100%" contain src="@/assets/logos/header1.png" />
       </v-avatar>
     </v-app-bar>

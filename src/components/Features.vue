@@ -49,7 +49,7 @@ export default {
           icon: "mdi-truck",
           title: "Delivery",
           text:
-            "We delivery for free within the GTA. Normal delivery times are 2-4 business days. Please call us for orders outside the GTA."
+            "We deliver for free within the GTA. Normal delivery times are 2-4 business days. Please call us for orders outside the GTA."
         },
         {
           icon: "mdi-cellphone-basic",

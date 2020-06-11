@@ -15,7 +15,7 @@
                     <span
                       :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']"
                       class="font-weight-light black--text"
-                    >We delivery for free within the GTA. Normal delivery times are 2-4 business days. Please call us for orders outside the GTA.</span>
+                    >We deliver for free within the GTA. Normal delivery times are 2-4 business days. Please call us for orders outside the GTA.</span>
                   </v-col>
                 </v-row>
               </v-container>
