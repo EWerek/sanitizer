@@ -15,7 +15,7 @@
                     <span
                       :class="[$vuetify.breakpoint.smAndDown ? 'headline' : 'display-1']"
                       class="font-weight-light black--text"
-                    >Free shipping on orders over $50.00 (1-2 days)</span>
+                    >Free shipping on orders over $50.00. Delivery within 1-3 business days</span>
                   </v-col>
                 </v-row>
               </v-container>

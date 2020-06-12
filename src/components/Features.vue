@@ -48,7 +48,8 @@ export default {
         {
           icon: "mdi-truck",
           title: "Delivery",
-          text: "Free shipping on orders over $50.00 (1-2 days)"
+          text:
+            "Free shipping on orders over $50.00 <br/> Delivery within 1-3 business days"
         },
         {
           icon: "mdi-cellphone-basic",
