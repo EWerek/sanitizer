@@ -21,7 +21,7 @@
                 <v-btn
                   class="mx-auto"
                   color="white"
-                  large
+                  small
                   fab
                   outlined
                   @click="$vuetify.goTo('#about')"
