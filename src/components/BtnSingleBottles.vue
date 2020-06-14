@@ -3,13 +3,14 @@
     <input type="hidden" name="cmd" value="_s-xclick" />
     <input type="hidden" name="hosted_button_id" value="9PDK9RWFNZLMQ" />
     <table class="mx-auto">
-      <tr>
+      <tr class="selectsize">
         <td>
           <input type="hidden" name="on0" value="Select Size" />Select Size
         </td>
       </tr>
       <tr>
-        <td>
+        <td class="pb-5">
+          <v-icon color="blue">mdi-chevron-double-right</v-icon>
           <select name="os0">
             <option value="500ml">500ml $12.99 CAD</option>
             <option value="32oz">32oz $19.99 CAD</option>
@@ -42,4 +43,7 @@ export default {
 </script>
 
 <style>
+.selectsize {
+  font-weight: bold;
+}
 </style>
