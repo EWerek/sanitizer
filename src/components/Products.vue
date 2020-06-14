@@ -10,20 +10,16 @@
         <v-divider class="mb-1"></v-divider>
         <v-divider></v-divider>
       </v-responsive>
-      <div>
-        <v-card
-          class="d-flex justify-md-center flex-md-row flex-column mb-6"
-          color="white"
-          flat
-          tile
-        >
+      <div class="pb-10">
+        <v-card class="d-flex justify-center flex-sm-row flex-column mb-6" color="white" flat>
           <v-card
             v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products"
             :key="i"
             class="pa-2"
-            outlined
-            tile
+            :max-width="[`${windowWidth > 600 && windowWidth <= 1900 ? '300':'100%'}`]"
             flush
+            tile
+            flat
           >
             <v-img class="mb-4" :src="src" height="70%" max-width="100%">
               <v-container>
@@ -40,19 +36,15 @@
         </v-card>
       </div>
       <div>
-        <v-card
-          class="d-flex justify-md-center flex-md-row flex-column mb-6"
-          color="white"
-          flat
-          tile
-        >
+        <v-card class="d-flex justify-center flex-sm-row flex-column mb-6" color="white" flat>
           <v-card
             v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products2"
-            class="pa-2"
             :key="i"
-            outlined
-            tile
+            class="pa-2"
+            :max-width="[`${windowWidth > 600 && windowWidth <= 1900 ? '468':'100%'}`]"
             flush
+            tile
+            flat
           >
             <v-img class="mb-4" :src="src" height="70%" max-width="100%">
               <v-container>
@@ -105,6 +97,7 @@ export default {
   },
   data() {
     return {
+      windowWidth: window.innerWidth,
       products: [
         {
           src: require("@/assets/products/twobottles.png"),
@@ -196,6 +189,12 @@ export default {
       }, 0);
       console.log(sectionID);
     }
+  },
+  mounted() {
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth;
+      console.log(this.windowWidth);
+    };
   }
 };
 </script>
