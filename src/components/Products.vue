@@ -158,7 +158,7 @@ export default {
         {
           src: require("@/assets/products/dispenser.png"),
           title: "Wall Mount Dispenser",
-          text: "$75 (Currently out of stock)",
+          text: "$75",
           button: "BtnDispenser",
           modalProps: {
             product: "Wall Mount Dispenser",
