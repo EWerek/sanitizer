@@ -15,7 +15,7 @@
       </v-responsive>
       <v-row>
         <v-col v-for="({ icon, title, text }, i) in features" :key="i" cols="12" md="4">
-          <v-card class="py-12 px-4" color="grey lighten-5" flat>
+          <v-card height="400" class="py-12 px-4" color="grey lighten-5" flat>
             <v-theme-provider dark>
               <div>
                 <v-avatar color="primary" size="88">
@@ -55,7 +55,7 @@ export default {
           icon: "mdi-cellphone-basic",
           title: "Contact Info",
           text:
-            "Ethan Werek <br/> Executive Maintenance Services <br/>  416-567-4811 <br/>  164 Torbay Rd, Markham, ON L3R 1G6, Canada"
+            "info@sanitizerking.ca <br/>  416-567-4811  <br/> Executive Maintenance Services <br/>  164 Torbay Rd, Markham, ON L3R 1G6, Canada"
         }
       ]
     };

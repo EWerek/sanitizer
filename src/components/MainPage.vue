@@ -6,17 +6,17 @@
         <section id="home">
           <Home />
         </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="Available">
-          <Available />
-        </section>
         <section id="products">
           <Products />
         </section>
         <section id="features" class="grey lighten-3">
           <Features />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="Available">
+          <Available />
         </section>
         <section id="contact">
           <Contact />

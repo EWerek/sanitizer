@@ -1,28 +1,9 @@
 <template>
   <div style="margin-bottom: 0px;">
-    <v-row justify="center" align="center" class="py-0 my-0">
-      <v-avatar class="mx-auto" size="275px">
-        <v-img height="100%" width="100%" contain src="@/assets/logos/availablelogo.png" />
-      </v-avatar>
-    </v-row>
-    <v-container>
-      <v-parallax
-        :height="$vuetify.breakpoint.smAndDown ? 1900 : 500"
-        src="@/assets/splashpages/hand1.png"
-      >
-        <v-container fill-height>
-          <v-row class="mx-auto">
-            <v-col v-for="[value, title] of available" :key="title" cols="20" md="4">
-              <div class="text-center">
-                <div class="display-1 font-weight-black mb-4 blue--text" v-html="value"></div>
-
-                <div class="title font-weight-regular text-uppercase" v-text="title"></div>
-              </div>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-parallax>
-    </v-container>
+    <v-parallax
+      :height="$vuetify.breakpoint.smAndDown ? 1900 : 500"
+      src="@/assets/splashpages/hand1.png"
+    ></v-parallax>
   </div>
 </template>
 

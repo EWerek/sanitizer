@@ -8,7 +8,11 @@
           class="mx-auto title font-weight-light mb-8 blue--text"
           max-width="720"
           style="text-align: center;"
-        >416-567-4811</v-responsive>
+        >
+          416-567-4811
+          <br />info@sanitizerking.ca
+        </v-responsive>
+
         <v-responsive class="mx-auto mb-12" width="56">
           <v-divider class="mb-1"></v-divider>
           <v-divider></v-divider>

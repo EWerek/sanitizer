@@ -57,6 +57,7 @@
 <script>
 export default {
   name: "sidebar",
+  components: {},
   data() {
     return {
       drawer: false,
