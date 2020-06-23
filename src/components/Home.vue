@@ -24,7 +24,7 @@
                   small
                   fab
                   outlined
-                  @click="$vuetify.goTo('#about')"
+                  @click="$vuetify.goTo('#products')"
                 >
                   <v-icon>mdi-chevron-double-down</v-icon>
                 </v-btn>
