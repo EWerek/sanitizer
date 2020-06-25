@@ -22,7 +22,7 @@
       <div class="pb-10">
         <v-card class="d-flex justify-center flex-sm-row flex-column mb-6" color="white" flat>
           <v-card
-            v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products"
+            v-for="({ src, text, title, discount, button, modalProps }, i) in products"
             :key="i"
             class="pa-2"
             :max-width="[`${windowWidth > 600 && windowWidth <= 1900 ? '300':'100%'}`]"
@@ -38,7 +38,12 @@
               </v-container>
             </v-img>
             <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
-            <h2 class="title font-weight-light mx-auto" v-text="text" style="text-align: center;"></h2>
+            <h2 class="title font-weight-light mx-auto" v-html="text" style="text-align: center;"></h2>
+            <h4
+              class="font-weight-light mx-auto red--text"
+              v-html="discount"
+              style="text-align: center;"
+            ></h4>
             <Modal v-bind="modalProps" class="py-3" />
             <component :is="button" style="text-align: center;"></component>
           </v-card>
@@ -123,8 +128,9 @@ export default {
       products: [
         {
           src: require("@/assets/products/bottle500ml.png"),
-          title: "Individual Bottle 500ml",
+          title: "Bottle 500ml",
           text: "$12.99",
+          discount: "Save 10% 6pack and 15% 12pack",
           button: "BtnBottle500ml",
           modalProps: {
             product: "500 ml Bottle",
@@ -134,8 +140,9 @@ export default {
         },
         {
           src: require("@/assets/products/bottle32oz.png"),
-          title: "Indivdual Bottle 32oz",
+          title: "Bottle 32oz",
           text: "$19.99",
+          discount: "Save 10% 6pack and 15% 12pack",
           button: "BtnBottle32oz",
           modalProps: {
             product: "32oz Bottle",
@@ -145,9 +152,9 @@ export default {
         },
 
         {
-          src: require("@/assets/products/gallonBottle.png"),
+          src: require("@/assets/products/onegallon.png"),
           title: "Case Four 1 Gallon Bottles",
-          text: "$325",
+          text: "$300",
           button: "BtnCase",
           modalProps: {
             product: "Four Gallon Case",
