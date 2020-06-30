@@ -127,7 +127,7 @@ export default {
       windowWidth: window.innerWidth,
       products: [
         {
-          src: require("@/assets/products/bottle500ml.png"),
+          src: require("@/assets/products/bottle500mlnew.png"),
           title: "Bottle 500ml",
           text: "$12.99",
           discount: "Save 10% 6pack and 15% 12pack",
@@ -139,7 +139,7 @@ export default {
           }
         },
         {
-          src: require("@/assets/products/bottle32oz.png"),
+          src: require("@/assets/products/bottle32oznew.png"),
           title: "Bottle 32oz",
           text: "$19.99",
           discount: "Save 10% 6pack and 15% 12pack",
@@ -152,7 +152,7 @@ export default {
         },
 
         {
-          src: require("@/assets/products/onegallon.png"),
+          src: require("@/assets/products/gallonnew.png"),
           title: "Case Four 1 Gallon Bottles",
           text: "$300",
           button: "BtnCase",
@@ -163,7 +163,7 @@ export default {
           }
         },
         {
-          src: require("@/assets/products/dispenser.png"),
+          src: require("@/assets/products/dispensernew.png"),
           title: "Wall Mount Dispenser",
           text: "$75",
           button: "BtnDispenser",
