@@ -50,7 +50,7 @@
         </v-card>
       </div>
       <div>
-        <v-expansion-panels flat class="mb-10">
+        <v-expansion-panels :value="panel" flat class="mb-10">
           <v-expansion-panel>
             <v-expansion-panel-header
               color="blue"
@@ -124,6 +124,7 @@ export default {
   },
   data() {
     return {
+      panel: 0,
       windowWidth: window.innerWidth,
       products: [
         {
