@@ -165,13 +165,13 @@ export default {
         },
         {
           src: require("@/assets/products/dispensernew.png"),
-          title: "Wall Mount Dispenser",
+          title: "Automatic Wall Mount Dispenser",
           text: "$75",
           button: "BtnDispenser",
           modalProps: {
-            product: "Wall Mount Dispenser",
+            product: "Automatic Wall Mount Dispenser",
             info:
-              "Our Dispensers are easy to install and top up. <br/><br/>Wall mounted with tape or screws. Viewing window to check stock level.<br/><br/> Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams"
+              "Our Dispensers are automatic and easy to install and top up. <br/><br/>Wall mounted with tape or screws. Viewing window to check stock level.<br/><br/> Capacity - 800 mL. Dimensions - H 250mm x W 125mm x D 136mm.Weight 700 grams <br/><br/> Requires 4 C batteries (Not included)"
           }
         }
       ],
