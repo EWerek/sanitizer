@@ -16,7 +16,7 @@
 
       <v-row justify="center" align="center" class="py-0 my-0">
         <v-col>
-          <v-avatar size="500">
+          <v-avatar :size="[`${windowWidth > 600 && windowWidth <= 2900 ? '500':'275'}`]">
             <v-img height="65%" width="65%" src="@/assets/splashpages/sprayguy.jpg" />
           </v-avatar>
         </v-col>
@@ -62,8 +62,16 @@ export default {
   components: {},
   data() {
     return {
+      windowWidth: window.innerWidth,
       mainParagraph:
         "To ensure that we can continue offering our clients top-tier service, we have introduced an electrostatic spray service. Our trained sanitisation experts can cover 6000 cubic feet with a single tank of solution. <br/><br/> When sprayed onto the surfaces of your doors, common areas, gyms, and parking levels, the disinfectant will evaporate within just a few minutes. Compared to Lysol wipes, which require a minimum of 30 minutes to take effect, our solution disinfects and kills 99.9% of germs immediately. <br/><br/>The solution has been tested and approved by Health Canada and the Agricultural Ministry of Canada. The agencies praised the remarkable efficiency of the service, which is 30 times faster than manually wiping down an area of the same size. Regular servicing will disinfect and keep your targeted areas clean for both preventative and reactionary purposes. <br/><br/> "
+    };
+  },
+  mounted() {
+    console.log(this.windowWidth);
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth;
+      console.log(this.windowWidth);
     };
   }
 };
