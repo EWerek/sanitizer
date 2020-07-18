@@ -1,18 +1,18 @@
 <template>
   <div class="pt-0">
     <v-container class="text-center">
+      <v-responsive class="mx-auto mb-12" width="800">
+        <v-divider class="mb-1"></v-divider>
+        <v-divider></v-divider>
+      </v-responsive>
       <v-row justify="center" align="center" class="py-0 my-0">
         <v-col justify="center" align="center">
           <h2
             :class="[$vuetify.breakpoint.smAndDown ? 'subtitle-2' : 'title']"
-            class="mx-auto font-weight-medium blue--text mt-n10"
+            class="mx-auto font-weight-medium blue--text mt-10"
           >SERVICES</h2>
         </v-col>
       </v-row>
-      <v-responsive class="mx-auto mb-12" width="256">
-        <v-divider class="mb-1"></v-divider>
-        <v-divider></v-divider>
-      </v-responsive>
 
       <v-row justify="center" align="center" class="py-0 my-0">
         <v-col>
