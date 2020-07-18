@@ -50,47 +50,29 @@
         </v-card>
       </div>
       <div>
-        <v-expansion-panels :value="panel" flat class="mb-10">
-          <v-expansion-panel>
-            <v-expansion-panel-header
-              color="blue"
-              class="mx-auto font-weight-medium mb-10"
-            >ACCESSORIES</v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <v-card class="d-flex justify-center flex-sm-row flex-column mb-6" color="white" flat>
-                <v-card
-                  v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products2"
-                  :key="i"
-                  class="pa-2"
-                  :max-width="[`${windowWidth > 600 && windowWidth <= 1900 ? '468':'100%'}`]"
-                  flush
-                  tile
-                  flat
-                >
-                  <v-img class="mb-4" :src="src" height="70%" max-width="100%">
-                    <v-container>
-                      <v-avatar class="float-right" size="70">
-                        <v-img :src="cornerImage" />
-                      </v-avatar>
-                    </v-container>
-                  </v-img>
-                  <h3
-                    class="font-weight-black text-uppercase"
-                    v-text="title"
-                    style="text-align: center;"
-                  ></h3>
-                  <h2
-                    class="title font-weight-light mx-auto"
-                    v-text="text"
-                    style="text-align: center;"
-                  ></h2>
-                  <Modal v-bind="modalProps" class="py-3" />
-                  <component :is="button" style="text-align: center;"></component>
-                </v-card>
-              </v-card>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
+        <v-card class="d-flex justify-center flex-sm-row flex-column mb-6" color="white" flat>
+          <v-card
+            v-for="({ src, text, title, button, modalProps,cornerImage }, i) in products2"
+            :key="i"
+            class="pa-2"
+            :max-width="[`${windowWidth > 600 && windowWidth <= 1900 ? '468':'100%'}`]"
+            flush
+            tile
+            flat
+          >
+            <v-img class="mb-4" :src="src" height="70%" max-width="100%">
+              <v-container>
+                <v-avatar class="float-right" size="70">
+                  <v-img :src="cornerImage" />
+                </v-avatar>
+              </v-container>
+            </v-img>
+            <h3 class="font-weight-black text-uppercase" v-text="title" style="text-align: center;"></h3>
+            <h2 class="title font-weight-light mx-auto" v-text="text" style="text-align: center;"></h2>
+            <Modal v-bind="modalProps" class="py-3" />
+            <component :is="button" style="text-align: center;"></component>
+          </v-card>
+        </v-card>
       </div>
     </v-container>
   </div>

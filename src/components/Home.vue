@@ -24,6 +24,7 @@
                   small
                   fab
                   outlined
+                  elevation="20"
                   @click="$vuetify.goTo('#products')"
                 >
                   <v-icon>mdi-chevron-double-down</v-icon>

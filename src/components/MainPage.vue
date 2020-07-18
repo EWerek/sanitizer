@@ -9,6 +9,9 @@
         <section id="products">
           <Products />
         </section>
+        <section id="services">
+          <Services />
+        </section>
         <section id="features" class="grey lighten-3">
           <Features />
         </section>
@@ -36,6 +39,7 @@ import Products from "./Products";
 import Features from "./Features";
 import Contact from "./Contact";
 import PageFooter from "./PageFooter";
+import Services from "./Services";
 
 export default {
   name: "SanitizerKing",
@@ -47,7 +51,8 @@ export default {
     Products,
     Features,
     Contact,
-    PageFooter
+    PageFooter,
+    Services
   },
   data() {
     return {};
